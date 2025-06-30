@@ -5,6 +5,12 @@ title: Galactic Archives
 
 # Welcome to the Galactic Archives
 
-This is a unified knowledge base for everything **Star Wars Galaxies**.
+A unified Star Wars Galaxies knowledge hub.
 
-Stay tuned for full integration with Restoration, Fandom, and our internal intel network.
+## 🗂 Categories
+
+- [Professions](/professions/)
+- [Planets](/planets/)
+- [Factions](/factions/)
+- [Guides](/guides/)
+- [Lore](/lore/)
