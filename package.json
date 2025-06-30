@@ -1,0 +1,16 @@
+{
+  "name": "galactic-archives",
+  "version": "1.0.0",
+  "description": "A unified Star Wars Galaxies knowledge hub combining official Restoration Wiki, SWG Fandom data, and exclusive resources powered by The Eye of the Galactic Beholder.",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": ["star wars galaxies", "wiki", "eleventy", "static site"],
+  "author": "R21 Digital",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

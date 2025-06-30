@@ -1,2 +1,8 @@
-# galactic-archives
-A unified Star Wars Galaxies knowledge hub combining official Restoration Wiki, SWG Fandom data, and exclusive resources powered by Multiple Projects – The Eye of the Galactic Beholder.
+# Galactic Archives
+
+A unified Star Wars Galaxies knowledge hub combining:
+- SWG Restoration Wiki
+- SWG Fandom data
+- Exclusive in-game intelligence curated by the Eye of the Galactic Beholder
+
+Built using Eleventy (11ty) and maintained by R21 Digital.
