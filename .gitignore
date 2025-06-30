@@ -5,3 +5,6 @@ public/
 output/
 .env
 .DS_Store
+/data/raw/*
+!/data/raw/**/
+!/data/raw/**/.gitkeep
