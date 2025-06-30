@@ -1,6 +1,7 @@
 node_modules/
-.dist/
+dist/
 public/
+!public/styles.css
 output/
 .env
 .DS_Store

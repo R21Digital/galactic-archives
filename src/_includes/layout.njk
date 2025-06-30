@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{{ title }}</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a> |
-    <a href="/about">About</a>
-  </nav>
+  <header>
+    <h1><a href="/">Galactic Archives</a></h1>
+    <nav>
+      <a href="/professions/">Professions</a>
+      <a href="/planets/">Planets</a>
+      <a href="/factions/">Factions</a>
+      <a href="/guides/">Guides</a>
+      <a href="/lore/">Lore</a>
+    </nav>
+  </header>
   <main>
     {{ content | safe }}
   </main>
