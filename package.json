@@ -7,10 +7,18 @@
     "start": "eleventy --serve",
     "build": "eleventy"
   },
-  "keywords": ["star wars galaxies", "wiki", "eleventy", "static site"],
+  "keywords": [
+    "star wars galaxies",
+    "wiki",
+    "eleventy",
+    "static site"
+  ],
   "author": "R21 Digital",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
