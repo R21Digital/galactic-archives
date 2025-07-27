@@ -42,3 +42,9 @@ Added client-side search powered by Fuse.js for fuzzy matching across titles, ca
 - `search.js` initializes Fuse and renders results live as the user types.
 - Generated `search-index.json` lists title, category, tags, and URL for each page.
 - Added basic styling for the search components.
+
+### Batch 005 – Special:Activity Monitor
+
+Added `scripts/fetchActivityLog.js` to pull recent changes from the SWGR wiki and save them to `data/recent-activity.json`.
+
+The script uses `axios` and `cheerio` to parse titles and links from the activity page.

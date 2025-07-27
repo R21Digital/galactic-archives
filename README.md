@@ -28,6 +28,20 @@ npm run import:fandom
 node scripts/import_beholder_data.js <export_directory>
 ```
 
+## Activity Monitor
+
+Fetch recent edits from the SWGR wiki:
+
+```bash
+node scripts/fetchActivityLog.js
+```
+
+The script writes updates to `data/recent-activity.json`. Install its dependencies with:
+
+```bash
+npm install axios cheerio
+```
+
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
 
 ## Development
