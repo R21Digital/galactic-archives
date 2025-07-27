@@ -8,6 +8,10 @@ A unified Star Wars Galaxies knowledge hub combining:
 Built using Eleventy (11ty) and maintained by R21 Digital.
 This fan-made project is not affiliated with or endorsed by Lucasfilm or Disney.
 
+## Requirements
+
+- Node.js ≥18
+
 ## Data Import
 
 The `/scripts` folder contains scrapers to pull data from:
