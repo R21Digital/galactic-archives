@@ -15,11 +15,11 @@ The `/scripts` folder contains scrapers to pull data from:
 - [SWG Fandom](https://swg.fandom.com/wiki/)
 - Internal "Beholder" project exports
 
-Run:
+Run the import scripts:
 
 ```bash
-node scripts/import_swgr_restoration.js
-node scripts/import_swg_fandom.js
+npm run import:swgr
+npm run import:fandom
 node scripts/import_beholder_data.js <export_directory>
 ```
 
