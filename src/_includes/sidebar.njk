@@ -1,9 +1,12 @@
 <aside class="sidebar">
-  <nav>
-    <a href="/professions/">Professions</a>
-    <a href="/planets/">Planets</a>
-    <a href="/factions/">Factions</a>
-    <a href="/guides/">Guides</a>
-    <a href="/lore/">Lore</a>
-  </nav>
+  <h2>Navigation</h2>
+  <ul>
+    {% for page in collections.all | sort(attribute='data.category') %}
+      <li>
+        <a href="{{ page.url }}">
+          {{ page.data.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </aside>
