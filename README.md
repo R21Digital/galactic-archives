@@ -33,13 +33,19 @@ node scripts/import_beholder_data.js <export_directory>
 Fetch recent edits from the SWGR wiki:
 
 ```bash
-node scripts/fetchActivityLog.js
+node scripts/fetchActivityLog.cjs
 ```
 
 The script writes updates to `data/recent-activity.json`. Install its dependencies with:
 
 ```bash
-npm install axios cheerio
+npm install axios cheerio dotenv
+```
+
+Optionally, create a `.env` file to override defaults:
+
+```ini
+WIKI_URL=https://swgr.org/wiki/special/activity/
 ```
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.

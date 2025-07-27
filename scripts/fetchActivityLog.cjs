@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const { load } = require('cheerio');
+require('dotenv').config();
 
 const WIKI_URL = 'https://swgr.org/wiki/special/activity/';
 const OUTPUT_PATH = path.join(__dirname, '../data/recent-activity.json');
