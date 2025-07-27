@@ -11,3 +11,13 @@ Introduced network/chat_listener.py for basic simulated chat listening.
 Created tests for OCR and chat.
 
 Created scripts/codex_validation_batch_065.py.
+
+### Batch 002 – Sidebar Layout Enhancements
+
+Introduced `base.njk` layout featuring a sidebar navigation area.
+
+Added `sidebar.njk` partial that lists pages grouped by category.
+
+Updated `main.css` with flexbox-based `.layout`, `.sidebar`, and `.content` classes for responsive page layout.
+
+Added category front matter to markdown files to populate the sidebar menu.
