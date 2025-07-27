@@ -42,7 +42,7 @@ The script writes updates to `data/recent-activity.json`. Install its dependenci
 npm install axios cheerio dotenv
 ```
 
-You can also override the default wiki URL or output location by adding a `.env` file:
+You can also override the default wiki URL or output location. Copy `.env.example` to `.env` and update the values:
 
 ```bash
 WIKI_URL=https://swgr.org/wiki/special/activity/
