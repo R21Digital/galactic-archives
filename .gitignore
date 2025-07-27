@@ -1,7 +1,9 @@
 node_modules/
 dist/
-public/
+public/*
 !public/styles.css
+!public/styles/
+!public/styles/**
 output/
 .env
 .DS_Store
