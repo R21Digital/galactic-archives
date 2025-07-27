@@ -1,11 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import axios from 'axios';
-import { load } from 'cheerio';
+const fs = require('fs');
+const path = require('path');
+const axios = require('axios');
+const { load } = require('cheerio');
 
 const WIKI_URL = 'https://swgr.org/wiki/special/activity/';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = path.join(__dirname, '../data/recent-activity.json');
 
 async function fetchActivity() {
@@ -33,4 +31,8 @@ async function fetchActivity() {
   }
 }
 
-fetchActivity();
+module.exports = { fetchActivity, OUTPUT_PATH };
+
+if (require.main === module) {
+  fetchActivity();
+}
