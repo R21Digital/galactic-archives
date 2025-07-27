@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       includes: "_includes",
+      data: "../data",
       output: "dist"
     },
     markdownTemplateEngine: "njk",
