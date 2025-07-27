@@ -10,7 +10,7 @@ This fan-made project is not affiliated with or endorsed by Lucasfilm or Disney.
 
 ## Requirements
 
-- Node.js ≥18
+- Node.js 18 (see `.nvmrc`)
 
 ## Data Import
 
@@ -29,3 +29,19 @@ node scripts/import_beholder_data.js <export_directory>
 ```
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
+
+## Development
+
+Start a local development server:
+
+```bash
+npm start
+```
+
+This runs the Eleventy preview server.
+
+Generate a production build with:
+
+```bash
+npm run build
+```
