@@ -31,3 +31,14 @@ Updated `base.njk` to include the breadcrumbs and page metadata section.
 Enhanced `head.njk` with a dynamic meta description for each page.
 
 Extended `main.css` with styles for breadcrumbs, headers, and meta info.
+
+### Batch 004 – Search Integration
+
+Added client-side search powered by Fuse.js for fuzzy matching across titles, categories, and tags.
+
+- New `searchbox.njk` partial inserts a search bar on every page.
+- `head.njk` now loads Fuse.js and a custom search script.
+- `base.njk` includes the search box above breadcrumbs and displays metadata in a single block.
+- `search.js` initializes Fuse and renders results live as the user types.
+- Generated `search-index.json` lists title, category, tags, and URL for each page.
+- Added basic styling for the search components.
