@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("/search-index.json");
-  const pages = await response.json();
+  let pages;
+  try {
+    const response = await fetch("/search-index.json");
+    pages = await response.json();
+  } catch (err) {
+    console.error("Failed to load search index:", err);
+    return;
+  }
 
   const fuse = new Fuse(pages, {
     keys: ["title", "category", "tags"],
