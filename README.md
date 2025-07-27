@@ -6,6 +6,7 @@ A unified Star Wars Galaxies knowledge hub combining:
 - Exclusive in-game intelligence curated by the Eye of the Galactic Beholder
 
 Built using Eleventy (11ty) and maintained by R21 Digital.
+This fan-made project is not affiliated with or endorsed by Lucasfilm or Disney.
 
 ## Data Import
 
