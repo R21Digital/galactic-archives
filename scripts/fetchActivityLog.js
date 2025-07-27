@@ -1,13 +1,16 @@
-const fs = require('fs');
-const path = require('path');
-require('dotenv/config');
-const axios = require('axios');
-const { load } = require('cheerio');
+import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
+import axios from 'axios';
+import { load } from 'cheerio';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const WIKI_URL = process.env.WIKI_URL || 'https://swgr.org/wiki/special/activity/';
 const OUTPUT_PATH = process.env.OUTPUT_PATH || path.join(__dirname, '../data/recent-activity.json');
 
-async function fetchActivity() {
+export async function fetchActivity() {
   try {
     const { data } = await axios.get(WIKI_URL);
     const $ = load(data);
@@ -32,8 +35,8 @@ async function fetchActivity() {
   }
 }
 
-module.exports = { fetchActivity, OUTPUT_PATH };
+export { OUTPUT_PATH };
 
-if (require.main === module) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   fetchActivity();
 }
