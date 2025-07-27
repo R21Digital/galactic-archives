@@ -21,3 +21,13 @@ Added `sidebar.njk` partial that lists pages grouped by category.
 Updated `main.css` with flexbox-based `.layout`, `.sidebar`, and `.content` classes for responsive page layout.
 
 Added category front matter to markdown files to populate the sidebar menu.
+
+### Batch 003 – Breadcrumb and Template Improvements
+
+Created `breadcrumbs.njk` to show a simple navigation trail.
+
+Updated `base.njk` to include the breadcrumbs and page metadata section.
+
+Enhanced `head.njk` with a dynamic meta description for each page.
+
+Extended `main.css` with styles for breadcrumbs, headers, and meta info.
