@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: About
+category: Meta
+tags:
+  - about
+  - project
+last_updated: 2025-07-27
 ---
 
 ## About the Galactic Archives
