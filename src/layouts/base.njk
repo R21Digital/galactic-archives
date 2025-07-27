@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "../includes/head.njk" %}
+</head>
+<body>
+  <header>
+    <h1><a href="/">Galactic Archives</a></h1>
+  </header>
+  {% include "../includes/sidebar.njk" %}
+  <main>
+    <h2>{{ title }}</h2>
+    {% if category or tags %}
+    <div class="page-meta">
+      {% if category %}<span class="category">{{ category }}</span>{% endif %}
+      {% if tags %}
+      <span class="tags">
+        {% for tag in tags %}<span class="tag">{{ tag }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+      </span>
+      {% endif %}
+    </div>
+    {% endif %}
+    {{ content | safe }}
+  </main>
+</body>
+</html>
