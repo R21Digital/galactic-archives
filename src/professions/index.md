@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: Professions
+category: Professions
+tags:
+  - professions
+  - overview
+last_updated: 2025-07-27
 ---
 
 # Professions

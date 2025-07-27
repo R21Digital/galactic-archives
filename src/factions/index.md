@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: Factions
+category: Factions
+tags:
+  - factions
+  - overview
+last_updated: 2025-07-27
 ---
 
 # Factions

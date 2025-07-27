@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: Planets
+category: Planets
+tags:
+  - planets
+  - overview
+last_updated: 2025-07-27
 ---
 
 # Planets

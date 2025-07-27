@@ -1,6 +1,11 @@
 ---
 layout: base.njk
 title: Guides
+category: Guides
+tags:
+  - guides
+  - overview
+last_updated: 2025-07-27
 ---
 
 # Game Guides
