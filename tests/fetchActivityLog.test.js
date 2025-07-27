@@ -1,17 +1,17 @@
-const fs = require('fs');
-jest.mock('axios');
-const axios = require('axios');
+import fs from 'fs';
+import axios from 'axios';
+import { jest } from '@jest/globals';
 
 const htmlSnippet = `
 <li class="mw-changeslist-title"><a href="/wiki/Page1">Page 1</a></li>
 <li class="mw-changeslist-title"><a href="/wiki/Page2">Page 2</a></li>
 `;
 
-const { fetchActivity, OUTPUT_PATH } = require('../scripts/fetchActivityLog.cjs');
+import { fetchActivity, OUTPUT_PATH } from '../scripts/fetchActivityLog.js';
 
 beforeEach(() => {
   if (fs.existsSync(OUTPUT_PATH)) fs.unlinkSync(OUTPUT_PATH);
-  axios.get.mockResolvedValue({ data: htmlSnippet });
+  axios.get = jest.fn().mockResolvedValue({ data: htmlSnippet });
 });
 
 test('fetchActivity writes expected JSON', async () => {
