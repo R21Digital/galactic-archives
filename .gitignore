@@ -1,6 +1,7 @@
 node_modules/
 dist/
 public/*
+!public/search.js
 output/
 .env
 .DS_Store
