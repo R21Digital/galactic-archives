@@ -4,7 +4,7 @@ export default function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      includes: "includes",
+      includes: "_includes",
       layouts: "layouts",
       data: "../data",
       output: "dist"
