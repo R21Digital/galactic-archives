@@ -45,3 +45,17 @@ Generate a production build with:
 ```bash
 npm run build
 ```
+
+### Python dependencies
+
+Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+After installation, run the test suite:
+
+```bash
+pytest
+```
