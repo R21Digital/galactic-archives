@@ -1,5 +1,7 @@
 export default function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("public");
+  // Copy assets from `public` directly to the site root so paths like
+  // `/styles/main.css` work without the `public/` prefix.
+  eleventyConfig.addPassthroughCopy({ "public": "." });
 
   return {
     dir: {
