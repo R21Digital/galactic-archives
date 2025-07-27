@@ -1,5 +1,4 @@
 import fs from 'fs';
-import fetch from 'node-fetch';
 import path from 'path';
 
 const baseURL = 'https://swgr.org/wiki/';
