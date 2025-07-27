@@ -6,7 +6,9 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "import:swgr": "node scripts/import_swgr_restoration.js",
+    "import:fandom": "node scripts/import_swg_fandom.js"
   },
   "keywords": [
     "star wars galaxies",

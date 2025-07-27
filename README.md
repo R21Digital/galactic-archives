@@ -15,10 +15,16 @@ The `/scripts` folder contains scrapers to pull data from:
 - [SWG Fandom](https://swg.fandom.com/wiki/)
 - Internal "Beholder" project exports
 
-Run:
+Run one of the import scripts using npm:
 
 ```bash
-node scripts/import_swgr_restoration.js
+npm run import:swgr
+```
+
+or
+
+```bash
+npm run import:fandom
 ```
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
