@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("public");
 
   return {
@@ -12,4 +12,4 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
   };
-};
+}
