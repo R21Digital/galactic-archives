@@ -19,6 +19,8 @@ Run:
 
 ```bash
 node scripts/import_swgr_restoration.js
+node scripts/import_swg_fandom.js
+node scripts/import_beholder_data.js <export_directory>
 ```
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
