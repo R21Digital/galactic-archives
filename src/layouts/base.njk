@@ -4,25 +4,24 @@
     {% include "head.njk" %}
   </head>
   <body>
-      <header class="site-header">
-        <h1 class="site-title"><a href="/">Galactic Archives</a></h1>
-      </header>
-      <div class="layout">
-        {% include "sidebar.njk" %}
-        <main class="content">
-          {% include "breadcrumbs.njk" %}
-          <header class="page-header">
-            <h1>{{ title }}</h1>
-          </header>
-          <div class="page-meta">
-            <span class="category">{{ category }}</span> |
-            <span class="tags">{{ tags | join(', ') }}</span> |
-            <span class="last-updated">Last updated: {{ last_updated }}</span>
-          </div>
-          <article class="page-body">
-            {{ content | safe }}
-          </article>
-        </main>
-      </div>
+    <div class="layout">
+      {% include "sidebar.njk" %}
+      <main class="content">
+        {% include "searchbox.njk" %}
+        {% include "breadcrumbs.njk" %}
+        <header class="page-header">
+          <h1>{{ title }}</h1>
+          <p class="page-meta">
+            <strong>Category:</strong> {{ category }} |
+            <strong>Tags:</strong> {{ tags | join(', ') }} |
+            <em>Last updated: {{ last_updated }}</em>
+          </p>
+        </header>
+
+        <article class="page-body">
+          {{ content | safe }}
+        </article>
+      </main>
+    </div>
   </body>
 </html>

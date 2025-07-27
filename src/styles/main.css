@@ -92,3 +92,35 @@ a:hover {
 .page-body {
   line-height: 1.6;
 }
+
+.search-container {
+  margin-bottom: 2rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background-color: #222;
+  color: #eee;
+}
+
+#search-results {
+  list-style: none;
+  padding-left: 0;
+}
+
+#search-results li {
+  margin-bottom: 0.25rem;
+}
+
+#search-results a {
+  display: block;
+  padding: 0.3rem;
+  background: #1e1e1e;
+  border-left: 3px solid #00bfff;
+  border-radius: 4px;
+}
