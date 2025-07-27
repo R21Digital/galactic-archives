@@ -1,6 +1,7 @@
 {
   "name": "galactic-archives",
   "version": "1.0.0",
+  "type": "module",
   "description": "A unified Star Wars Galaxies knowledge hub combining official Restoration Wiki, SWG Fandom data, and exclusive resources powered by The Eye of the Galactic Beholder.",
   "main": ".eleventy.js",
   "scripts": {
