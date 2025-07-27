@@ -12,11 +12,19 @@ const fandomPages = [
 ];
 
 async function fetchAndSave(page) {
-  const res = await fetch(fandomBase + page);
-  const html = await res.text();
-  const filePath = path.join('data/raw/swg_fandom', `${page}.html`);
-  fs.writeFileSync(filePath, html);
-  console.log(`Saved ${page}`);
+  try {
+    const res = await fetch(fandomBase + page);
+    if (!res.ok) {
+      console.error(`Failed to fetch ${page}: ${res.status} ${res.statusText}`);
+      return;
+    }
+    const html = await res.text();
+    const filePath = path.join('data/raw/swg_fandom', `${page}.html`);
+    fs.writeFileSync(filePath, html);
+    console.log(`Saved ${page}`);
+  } catch (err) {
+    console.error(`Error fetching ${page}:`, err);
+  }
 }
 
 async function run() {
