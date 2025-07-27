@@ -6,6 +6,22 @@ body {
   padding: 0;
 }
 
+.site-header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.site-title a {
+  color: #80dfff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.site-title a:hover {
+  text-decoration: underline;
+}
+
 .layout {
   display: flex;
   flex-direction: row;
