@@ -12,6 +12,17 @@ This fan-made project is not affiliated with or endorsed by Lucasfilm or Disney.
 
 - Node.js 18 (see `.nvmrc`)
 
+## Setup
+
+Install the Node modules and Python packages before running tests or scripts:
+
+```bash
+npm install
+pip install -r requirements.txt
+```
+
+These steps are required prior to using `npm test` or `pytest`.
+
 ## Data Import
 
 The `/scripts` folder contains scrapers to pull data from:
