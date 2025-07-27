@@ -4,6 +4,6 @@ eleventyExcludeFromCollections: true
 ---
 [
 {% for item in collections.searchIndex %}
-  {{ item | json }}{% if not loop.last %},{% endif %}
+  {{ item | json | safe }}{% if not loop.last %},{% endif %}
 {% endfor %}
 ]
