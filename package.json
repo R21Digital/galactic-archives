@@ -9,6 +9,7 @@
     "build": "eleventy",
     "import:swgr": "node scripts/import_swgr_restoration.js",
     "import:fandom": "node scripts/import_swg_fandom.js",
+    "fetch:activity": "node scripts/fetchActivityLog.js",
     "test": "jest"
   },
   "keywords": [

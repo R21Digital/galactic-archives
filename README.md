@@ -33,7 +33,7 @@ node scripts/import_beholder_data.js <export_directory>
 Fetch recent edits from the SWGR wiki:
 
 ```bash
-node scripts/fetchActivityLog.js
+npm run fetch:activity
 ```
 
 The script writes updates to `data/recent-activity.json`. Install its dependencies with:
