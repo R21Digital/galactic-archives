@@ -39,8 +39,17 @@ npm run fetch:activity
 The script writes updates to `data/recent-activity.json`. Install its dependencies with:
 
 ```bash
-npm install axios cheerio
+npm install axios cheerio dotenv
 ```
+
+You can also override the default wiki URL or output location by adding a `.env` file:
+
+```bash
+WIKI_URL=https://swgr.org/wiki/special/activity/
+OUTPUT_PATH=./data/recent-activity.json
+```
+
+These values are loaded automatically when running the script.
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
 
