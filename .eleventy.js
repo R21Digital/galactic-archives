@@ -2,6 +2,10 @@ import { globSync } from "glob";
 import fs from "fs";
 import matter from "gray-matter";
 
+function slugifyCategory(name) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
+
 export default function (eleventyConfig) {
   // Copy assets from `public` directly to the site root
   eleventyConfig.addPassthroughCopy({ public: "." });
@@ -27,7 +31,7 @@ export default function (eleventyConfig) {
   }
 
   for (const cat of categories) {
-    const key = cat.toLowerCase().replace(/\s+/g, '-');
+    const key = slugifyCategory(cat);
     eleventyConfig.addCollection(key, (collectionApi) =>
       collectionApi
         .getAll()
@@ -64,3 +68,5 @@ export default function (eleventyConfig) {
     dataTemplateEngine: "njk"
   };
 }
+
+export { slugifyCategory };
