@@ -75,3 +75,4 @@ Introduced `src/layouts/homepage.njk` to display a grid of category links.
 Extended `main.css` with `.category-grid` styles.
 
 The landing page now automatically links to every discovered category.
+Created scripts/codex_validation_batch_008.py.
