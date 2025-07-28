@@ -93,3 +93,7 @@ After installation, run the test suite:
 ```bash
 pytest
 ```
+
+## Internal Routes
+
+The site includes a private `/internal/` section used for team-only resources. Pages in this directory set `eleventyExcludeFromCollections: true`, so they remain hidden from generated indexes. Search engines are also instructed not to crawl these routes via the `Disallow: /internal/` rule in [`public/robots.txt`](public/robots.txt).
