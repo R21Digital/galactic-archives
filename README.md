@@ -66,7 +66,7 @@ Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
 
 ## Content Classification
 
-Run `npm run classify` to execute the hybrid rule+AI classifier. The script reads from `data/sample-hint.md` and writes metadata to `classified/sample-hint.json`.
+Run `npm run classify` to execute the hybrid rule+AI classifier. By default the script reads from `data/sample-hint.md` and writes metadata to `classified/sample-hint.json`. When running it manually you can override these paths with `--input <file>` and `--output <file>`.
 
 ## Development
 

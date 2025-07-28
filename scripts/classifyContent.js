@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Paths used when running the script directly
+// Default paths used when running the script directly
 const INPUT_PATH = path.join(__dirname, '../data/sample-hint.md');
 const OUTPUT_PATH = path.join(__dirname, '../classified/sample-hint.json');
 
@@ -54,7 +54,16 @@ export function classifyContent(text) {
 export { ruleBasedClassifier, fallbackAIMockClassifier };
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const raw = fs.readFileSync(INPUT_PATH, 'utf8');
+  const args = process.argv.slice(2);
+  const getArg = (flag, defaultVal) => {
+    const idx = args.indexOf(flag);
+    return idx !== -1 && args[idx + 1] ? args[idx + 1] : defaultVal;
+  };
+
+  const inputPath = getArg('--input', INPUT_PATH);
+  const outputPath = getArg('--output', OUTPUT_PATH);
+
+  const raw = fs.readFileSync(inputPath, 'utf8');
   const classification = classifyContent(raw);
 
   const metadata = {
@@ -63,8 +72,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     ...classification
   };
 
-  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(metadata, null, 2));
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(metadata, null, 2));
 
   console.log('✅ Classified:', metadata);
 }
