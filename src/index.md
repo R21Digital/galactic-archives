@@ -1,12 +1,6 @@
 ---
-layout: homepage.njk
 title: Galactic Archives
-category: Home
-tags:
-  - home
+layout: homepage.njk
 permalink: "/"
-eleventyExcludeFromCollections: true
-last_updated: 2025-07-27
 ---
-
-Welcome to the Galactic Archives.
+This is your root landing page. The layout does the heavy lifting.
