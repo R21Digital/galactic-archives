@@ -21,6 +21,8 @@ npm install
 pip install -r requirements.txt
 ```
 
+You can also install the Python packages via `make deps`.
+
 These steps are required prior to using `npm test` or `pytest`.
 
 ## Data Import
@@ -86,17 +88,21 @@ npm run build
 
 ### Python dependencies
 
-Install the required Python packages (the list includes `pytest`):
+Install the required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-After installation, run the test suite:
+## Testing
+
+Run the test suite with:
 
 ```bash
 pytest
 ```
+
+Be sure to install dependencies first by running `pip install -r requirements.txt`.
 
 ## Internal Routes
 
