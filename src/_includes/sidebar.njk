@@ -8,11 +8,11 @@
           </ul>
         {% endif %}
         {% set lastCategory = page.data.category %}
-        <h3><a href="/{{ page.data.category | slug }}/">{{ page.data.category }}</a></h3>
+        <h3><a href="/{{ page.data.category | categorySlug }}/">{{ page.data.category }}</a></h3>
         <ul>
-          <li><a href="/{{ page.data.category | slug }}/">All {{ page.data.category }}</a></li>
+          <li><a href="/{{ page.data.category | categorySlug }}/">All {{ page.data.category }}</a></li>
       {% endif %}
-      {% if page.url != '/' + (page.data.category | slug) + '/' %}
+      {% if page.url != '/' + (page.data.category | categorySlug) + '/' %}
         <li>
           <a href="{{ page.url }}">{{ page.data.title }}</a>
         </li>

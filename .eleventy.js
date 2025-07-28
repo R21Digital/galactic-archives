@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: "." });
 
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  eleventyConfig.addFilter("categorySlug", slugifyCategory);
 
   // Discover unique categories by scanning content files
   const files = globSync("src/**/*.md", {
