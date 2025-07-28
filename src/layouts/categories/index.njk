@@ -7,6 +7,8 @@
     <div class="layout">
       {% include "sidebar.njk" %}
       <main class="content">
+        {% include "searchbox.njk" %}
+        {% include "breadcrumbs.njk" %}
         <h1>{{ title }}</h1>
         <ul class="category-list">
           {% for item in items | sort(attribute='data.title') %}
