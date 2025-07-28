@@ -1,5 +1,5 @@
 import { jest } from '@jest/globals';
-import eleventyConfigFn from '../.eleventy.js';
+import eleventyConfigFn, { slugifyCategory } from '../.eleventy.js';
 
 test('professions and quests collections filter items by category', () => {
   const collections = {};
@@ -14,10 +14,8 @@ test('professions and quests collections filter items by category', () => {
   // Load Eleventy configuration which registers collections
   eleventyConfigFn(mockConfig);
 
-  const slugify = (cat) => cat.toLowerCase().replace(/\s+/g, '-');
-
-  expect(collections).toHaveProperty(slugify('Professions'));
-  expect(collections).toHaveProperty(slugify('Quests'));
+  expect(collections).toHaveProperty(slugifyCategory('Professions'));
+  expect(collections).toHaveProperty(slugifyCategory('Quests'));
 
   const items = [
     { data: { category: 'Professions', title: 'Ranger' } },
@@ -28,8 +26,8 @@ test('professions and quests collections filter items by category', () => {
     getAll: () => items
   };
 
-  const professions = collections[slugify('Professions')](collectionApi);
-  const quests = collections[slugify('Quests')](collectionApi);
+  const professions = collections[slugifyCategory('Professions')](collectionApi);
+  const quests = collections[slugifyCategory('Quests')](collectionApi);
 
   expect(professions.map(i => i.data.title)).toEqual(['Ranger', 'Medic']);
   expect(quests.map(i => i.data.title)).toEqual(['Legacy Quest']);
