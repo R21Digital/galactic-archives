@@ -124,3 +124,20 @@ a:hover {
   border-left: 3px solid #00bfff;
   border-radius: 4px;
 }
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.category-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-list .tag {
+  font-size: 0.8rem;
+  color: #aaa;
+}

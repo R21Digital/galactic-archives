@@ -4,6 +4,14 @@ export default function(eleventyConfig) {
 
   eleventyConfig.addFilter("json", value => JSON.stringify(value));
 
+  const categories = ["Professions", "Quests"];
+
+  for (const cat of categories) {
+    eleventyConfig.addCollection(cat.toLowerCase(), (collectionApi) =>
+      collectionApi.getAll().filter((item) => item.data.category === cat)
+    );
+  }
+
   eleventyConfig.addCollection("searchIndex", function (collectionApi) {
     return collectionApi.getAll().map((item) => {
       return {

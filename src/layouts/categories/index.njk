@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    <div class="layout">
+      {% include "sidebar.njk" %}
+      <main class="content">
+        <h1>{{ title }}</h1>
+        <ul class="category-list">
+          {% for item in items %}
+            <li>
+              <a href="{{ item.url }}">{{ item.data.title }}</a>
+              <span class="tag">{{ item.data.tags | join(', ') }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
