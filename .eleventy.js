@@ -39,7 +39,11 @@ export default function (eleventyConfig) {
     eleventyConfig.addCollection(key, (collectionApi) =>
       collectionApi
         .getAll()
-        .filter((item) => item.data.category === cat)
+        .filter(
+          (item) =>
+            item.data.category === cat &&
+            item.data.eleventyExcludeFromCollections !== true
+        )
     );
   }
 
