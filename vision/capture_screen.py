@@ -1,5 +1,4 @@
 import pyautogui
-from PIL import Image
 
 
 def capture_screen(region=None):
