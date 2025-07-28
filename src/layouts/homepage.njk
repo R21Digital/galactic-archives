@@ -7,23 +7,22 @@
     <div class="layout">
       {% include "sidebar.njk" %}
       <main class="content">
-        <h1>{{ title }}</h1>
-        <div class="category-grid">
-          {# Build a unique list of categories from all pages #}
-          {% set categories = [] %}
+        <h1>Galactic Archives</h1>
+        <p>Welcome to the player-powered knowledge base for <strong>Star Wars Galaxies</strong>.</p>
+
+        <h2>Explore Categories</h2>
+        <ul class="category-grid">
+          {% set seen = [] %}
           {% for page in collections.all %}
-            {% if page.data.category
-                and page.data.eleventyExcludeFromCollections !== true
-                and categories.indexOf(page.data.category) == -1 %}
-              {% set _ = categories.push(page.data.category) %}
+            {% set cat = page.data.category %}
+            {% if cat and not (cat in seen) and page.data.eleventyExcludeFromCollections != true %}
+              {% set _ = seen.push(cat) %}
+              <li>
+                <a href="/{{ cat | lower }}/">{{ cat }}</a>
+              </li>
             {% endif %}
           {% endfor %}
-          {% for cat in categories | sort %}
-            <div class="category-item">
-              <a href="/{{ cat | categorySlug }}/">{{ cat }}</a>
-            </div>
-          {% endfor %}
-        </div>
+        </ul>
       </main>
     </div>
   </body>

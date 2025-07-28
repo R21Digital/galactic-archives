@@ -144,16 +144,27 @@ a:hover {
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
-  margin: 1rem 0;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.category-grid li {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-left: 4px solid #00bfff;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.category-grid li:hover {
+  background: #222;
 }
 
 .category-grid a {
+  color: #80dfff;
+  font-weight: bold;
   display: block;
-  padding: 1rem;
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 4px;
-  text-align: center;
 }
