@@ -12,7 +12,9 @@
           {# Build a unique list of categories from all pages #}
           {% set categories = [] %}
           {% for page in collections.all %}
-            {% if page.data.category and categories.indexOf(page.data.category) == -1 %}
+            {% if page.data.category
+                and page.data.eleventyExcludeFromCollections !== true
+                and categories.indexOf(page.data.category) == -1 %}
               {% set _ = categories.push(page.data.category) %}
             {% endif %}
           {% endfor %}
