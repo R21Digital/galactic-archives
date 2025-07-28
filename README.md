@@ -64,6 +64,10 @@ These values are loaded automatically when running the script.
 
 Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
 
+## Content Classification
+
+Run `npm run classify` to execute the hybrid rule+AI classifier. The script reads from `data/sample-hint.md` and writes metadata to `classified/sample-hint.json`.
+
 ## Development
 
 Start a local development server:
