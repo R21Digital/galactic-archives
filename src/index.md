@@ -13,7 +13,7 @@ A unified Star Wars Galaxies knowledge hub.
 
 ## 🗂 Categories
 
-- [Professions](/professions/)
+- [Professions](/professions/overview/)
 - [Planets](/planets/)
 - [Factions](/factions/)
 - [Guides](/guides/)

@@ -5,6 +5,7 @@ category: Professions
 tags:
   - professions
   - overview
+permalink: "/professions/overview/"
 last_updated: 2025-07-27
 ---
 
