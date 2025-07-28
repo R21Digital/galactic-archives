@@ -59,7 +59,7 @@ Added `src/internal/ms11-status.md` to track MS11 progress; these pages use `ele
 
 ### Batch 007 – Category Listing Pages
 
-Added `categories/index.njk` layout to display lists of items within a category.
+Added the `src/layouts/categories/index.njk` layout to display lists of items within a category.
 
 Created `professions.md` and `quests.md` in `src/content` to show the Professions and Quests collections using pagination.
 
