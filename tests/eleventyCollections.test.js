@@ -59,3 +59,19 @@ test('category collections exclude items flagged eleventyExcludeFromCollections'
   const professions = collections[slugifyCategory('Professions')](collectionApi);
   expect(professions.map(i => i.data.title)).toEqual(['Smuggler']);
 });
+
+test('categories from excluded files are not added to collections', () => {
+  const collections = {};
+  const mockConfig = {
+    addPassthroughCopy: jest.fn(),
+    addFilter: jest.fn(),
+    addCollection: (name, fn) => {
+      collections[name] = fn;
+    }
+  };
+
+  eleventyConfigFn(mockConfig);
+
+  expect(collections).not.toHaveProperty(slugifyCategory('Home'));
+  expect(collections).not.toHaveProperty(slugifyCategory('Internal'));
+});

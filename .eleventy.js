@@ -29,7 +29,11 @@ export default function (eleventyConfig) {
   const categories = new Set();
   for (const file of files) {
     const { data } = matter(fs.readFileSync(file, "utf-8"));
-    if (data && data.category) {
+    if (
+      data &&
+      data.category &&
+      data.eleventyExcludeFromCollections !== true
+    ) {
       categories.add(data.category);
     }
   }
