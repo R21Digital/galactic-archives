@@ -63,4 +63,4 @@ Added `categories/index.njk` layout to display lists of items within a category.
 
 Created `professions.md` and `quests.md` in `src/content` to show the Professions and Quests collections using pagination.
 
-Updated `.eleventy.js` to generate `professions` and `quests` collections by filtering items by their `category` value.
+Updated `.eleventy.js` to automatically discover categories from front matter and generate collections for each one.
