@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: homepage.njk
 title: Galactic Archives
 category: Home
 tags:
@@ -7,14 +7,4 @@ tags:
 last_updated: 2025-07-27
 ---
 
-# Welcome to the Galactic Archives
-
-A unified Star Wars Galaxies knowledge hub.
-
-## 🗂 Categories
-
-- [Professions](/professions/overview/)
-- [Planets](/planets/)
-- [Factions](/factions/)
-- [Guides](/guides/)
-- [Lore](/lore/)
+Welcome to the Galactic Archives.

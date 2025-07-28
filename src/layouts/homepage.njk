@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    <div class="layout">
+      {% include "sidebar.njk" %}
+      <main class="content">
+        <h1>{{ title }}</h1>
+        <div class="category-grid">
+          {# Build a unique list of categories from all pages #}
+          {% set categories = [] %}
+          {% for page in collections.all %}
+            {% if page.data.category and categories.indexOf(page.data.category) == -1 %}
+              {% set _ = categories.push(page.data.category) %}
+            {% endif %}
+          {% endfor %}
+          {% for cat in categories | sort %}
+            <div class="category-item">
+              <a href="/{{ cat | categorySlug }}/">{{ cat }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
