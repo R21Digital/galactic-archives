@@ -14,7 +14,7 @@
           <h1>{{ title }}</h1>
           <p class="page-meta">
             <strong>Category:</strong> {{ category }} |
-            <strong>Tags:</strong> {{ tags | join(', ') }} |
+            <strong>Tags:</strong> {{ tags | default([]) | join(', ') }} |
             <em>Last updated: {{ last_updated }}</em>
           </p>
         </header>
