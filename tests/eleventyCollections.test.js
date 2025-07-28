@@ -31,4 +31,7 @@ test('professions and quests collections filter items by category', () => {
 
   expect(professions.map(i => i.data.title)).toEqual(['Ranger', 'Medic']);
   expect(quests.map(i => i.data.title)).toEqual(['Legacy Quest']);
+
+  // Punctuation is removed when slugifying categories
+  expect(slugifyCategory('Lore & Legends!')).toBe('lore-legends');
 });
