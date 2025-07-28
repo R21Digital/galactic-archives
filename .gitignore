@@ -10,3 +10,4 @@ output/
 !/data/raw/**/.gitkeep
 
 __pycache__/
+/classified/*.json
