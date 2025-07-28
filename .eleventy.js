@@ -27,7 +27,8 @@ export default function (eleventyConfig) {
   }
 
   for (const cat of categories) {
-    eleventyConfig.addCollection(cat.toLowerCase(), (collectionApi) =>
+    const key = cat.toLowerCase().replace(/\s+/g, '-');
+    eleventyConfig.addCollection(key, (collectionApi) =>
       collectionApi
         .getAll()
         .filter((item) => item.data.category === cat)

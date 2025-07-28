@@ -14,8 +14,10 @@ test('professions and quests collections filter items by category', () => {
   // Load Eleventy configuration which registers collections
   eleventyConfigFn(mockConfig);
 
-  expect(collections).toHaveProperty('professions');
-  expect(collections).toHaveProperty('quests');
+  const slugify = (cat) => cat.toLowerCase().replace(/\s+/g, '-');
+
+  expect(collections).toHaveProperty(slugify('Professions'));
+  expect(collections).toHaveProperty(slugify('Quests'));
 
   const items = [
     { data: { category: 'Professions', title: 'Ranger' } },
@@ -26,8 +28,8 @@ test('professions and quests collections filter items by category', () => {
     getAll: () => items
   };
 
-  const professions = collections.professions(collectionApi);
-  const quests = collections.quests(collectionApi);
+  const professions = collections[slugify('Professions')](collectionApi);
+  const quests = collections[slugify('Quests')](collectionApi);
 
   expect(professions.map(i => i.data.title)).toEqual(['Ranger', 'Medic']);
   expect(quests.map(i => i.data.title)).toEqual(['Legacy Quest']);
