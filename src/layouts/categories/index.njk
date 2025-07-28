@@ -12,7 +12,7 @@
           {% for item in items %}
             <li>
               <a href="{{ item.url }}">{{ item.data.title }}</a>
-              <span class="tag">{{ item.data.tags | join(', ') }}</span>
+              <span class="tag">{{ item.data.tags | default([]) | join(', ') }}</span>
             </li>
           {% endfor %}
         </ul>
