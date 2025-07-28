@@ -65,3 +65,13 @@ Created `professions.md` and `quests.md` in `src/content` to show the Profession
 
 Updated `.eleventy.js` to automatically discover categories from front matter and generate collections for each one.
 Created scripts/codex_validation_batch_007.py.
+
+### Batch 008 – Home Page & Category Directory
+
+Added a new landing page at `src/index.md` that uses the `homepage.njk` layout.
+
+Introduced `src/layouts/homepage.njk` to display a grid of category links.
+
+Extended `main.css` with `.category-grid` styles.
+
+The landing page now automatically links to every discovered category.
