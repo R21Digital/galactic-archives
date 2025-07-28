@@ -1,6 +1,7 @@
 node_modules/
 dist/
 public/*
+!public/robots.txt
 output/
 .env
 .DS_Store
