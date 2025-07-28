@@ -10,7 +10,8 @@
     "import:swgr": "node scripts/import_swgr_restoration.js",
     "import:fandom": "node scripts/import_swg_fandom.js",
     "fetch:activity": "node scripts/fetchActivityLog.js",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "classify": "node scripts/classifyContent.js"
   },
   "keywords": [
     "star wars galaxies",
