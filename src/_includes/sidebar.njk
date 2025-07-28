@@ -1,12 +1,23 @@
 <aside class="sidebar">
   <h2>Navigation</h2>
-  <ul>
-    {% for page in collections.all | sort(attribute='data.category') %}
+  {% set lastCategory = null %}
+  {% for page in collections.all | sort(attribute='data.category') %}
+    {% if page.data.category != lastCategory %}
+      {% if not loop.first %}
+        </ul>
+      {% endif %}
+      {% set lastCategory = page.data.category %}
+      <h3><a href="/{{ page.data.category | slug }}/">{{ page.data.category }}</a></h3>
+      <ul>
+        <li><a href="/{{ page.data.category | slug }}/">All {{ page.data.category }}</a></li>
+    {% endif %}
+    {% if page.url != '/' + (page.data.category | slug) + '/' %}
       <li>
-        <a href="{{ page.url }}">
-          {{ page.data.title }}
-        </a>
+        <a href="{{ page.url }}">{{ page.data.title }}</a>
       </li>
-    {% endfor %}
-  </ul>
+    {% endif %}
+    {% if loop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
 </aside>
