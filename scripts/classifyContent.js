@@ -5,11 +5,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load raw markdown
+// Paths used when running the script directly
 const INPUT_PATH = path.join(__dirname, '../data/sample-hint.md');
 const OUTPUT_PATH = path.join(__dirname, '../classified/sample-hint.json');
-
-const raw = fs.readFileSync(INPUT_PATH, 'utf8');
 
 // Rule-based categories
 const rules = [
@@ -45,20 +43,28 @@ function fallbackAIMockClassifier(text) {
   };
 }
 
-// Classify input
-let classification = ruleBasedClassifier(raw);
-if (!classification) {
-  classification = fallbackAIMockClassifier(raw);
+export function classifyContent(text) {
+  let classification = ruleBasedClassifier(text);
+  if (!classification) {
+    classification = fallbackAIMockClassifier(text);
+  }
+  return classification;
 }
 
-// Build metadata block
-const metadata = {
-  title: 'Sample Hint',
-  classified_at: new Date().toISOString(),
-  ...classification
-};
+export { ruleBasedClassifier, fallbackAIMockClassifier };
 
-fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
-fs.writeFileSync(OUTPUT_PATH, JSON.stringify(metadata, null, 2));
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const raw = fs.readFileSync(INPUT_PATH, 'utf8');
+  const classification = classifyContent(raw);
 
-console.log('✅ Classified:', metadata);
+  const metadata = {
+    title: 'Sample Hint',
+    classified_at: new Date().toISOString(),
+    ...classification
+  };
+
+  fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
+  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(metadata, null, 2));
+
+  console.log('✅ Classified:', metadata);
+}
