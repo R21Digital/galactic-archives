@@ -82,7 +82,7 @@ npm run build
 
 ### Python dependencies
 
-Install the required Python packages:
+Install the required Python packages (the list includes `pytest`):
 
 ```bash
 pip install -r requirements.txt
