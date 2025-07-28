@@ -44,3 +44,17 @@ test('homepage categories are sorted alphabetically', () => {
   expect(idxApples).toBeLessThan(idxBananas);
   expect(idxBananas).toBeLessThan(idxCitrus);
 });
+
+test('categories with punctuation are slugified in links', () => {
+  const tpl = fs.readFileSync('src/layouts/homepage.njk', 'utf8');
+  const env = new nunjucks.Environment(new NullLoader());
+  env.addFilter('categorySlug', slugifyCategory);
+  const html = env.renderString(tpl, {
+    collections: {
+      all: [
+        { data: { category: 'Lore & Legends' } }
+      ]
+    }
+  });
+  expect(html).toContain('<a href="/lore-legends/">Lore &amp; Legends</a>');
+});
