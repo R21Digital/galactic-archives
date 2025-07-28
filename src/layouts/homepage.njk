@@ -12,16 +12,18 @@
 
         <h2>Explore Categories</h2>
         <ul class="category-grid">
-          {% set seen = [] %}
+          {% set cats = [] %}
           {% for page in collections.all %}
             {% set cat = page.data.category %}
-            {% if cat and not (cat in seen) and page.data.eleventyExcludeFromCollections != true %}
-              {% set _ = seen.push(cat) %}
-              <li>
-                <!-- Use the slugified category for the URL -->
-                <a href="/{{ cat | categorySlug }}/">{{ cat }}</a>
-              </li>
+            {% if cat and page.data.eleventyExcludeFromCollections != true and not (cat in cats) %}
+              {% set _ = cats.push(cat) %}
             {% endif %}
+          {% endfor %}
+          {% for cat in cats | sort %}
+            <li>
+              <!-- Use the slugified category for the URL -->
+              <a href="/{{ cat | categorySlug }}/">{{ cat }}</a>
+            </li>
           {% endfor %}
         </ul>
       </main>
