@@ -6,6 +6,7 @@ pagination:
   size: 1000
   alias: items
 permalink: "/professions/"
+eleventyExcludeFromCollections: true
 eleventyComputed:
   category: "Professions"
 ---
