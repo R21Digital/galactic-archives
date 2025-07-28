@@ -56,3 +56,11 @@ Created an `/internal/` route for private pages.
 Introduced `internal.njk` layout that mirrors the main site but displays an `access-warning.njk` banner.
 
 Added `src/internal/ms11-status.md` to track MS11 progress; these pages use `eleventyExcludeFromCollections: true` so they stay out of the sidebar and search results.
+
+### Batch 007 – Category Listing Pages
+
+Added `categories/index.njk` layout to display lists of items within a category.
+
+Created `professions.md` and `quests.md` in `src/content` to show the Professions and Quests collections using pagination.
+
+Updated `.eleventy.js` to generate `professions` and `quests` collections by filtering items by their `category` value.
