@@ -3,7 +3,10 @@ import fs from "fs";
 import matter from "gray-matter";
 
 function slugifyCategory(name) {
-  return name.toLowerCase().replace(/\s+/g, "-");
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
 export default function (eleventyConfig) {
