@@ -18,7 +18,8 @@
             {% if cat and not (cat in seen) and page.data.eleventyExcludeFromCollections != true %}
               {% set _ = seen.push(cat) %}
               <li>
-                <a href="/{{ cat | lower }}/">{{ cat }}</a>
+                <!-- Use the slugified category for the URL -->
+                <a href="/{{ cat | categorySlug }}/">{{ cat }}</a>
               </li>
             {% endif %}
           {% endfor %}
