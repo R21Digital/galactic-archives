@@ -64,3 +64,4 @@ Added the `src/layouts/categories/index.njk` layout to display lists of items wi
 Created `professions.md` and `quests.md` in `src/content` to show the Professions and Quests collections using pagination.
 
 Updated `.eleventy.js` to automatically discover categories from front matter and generate collections for each one.
+Created scripts/codex_validation_batch_007.py.
