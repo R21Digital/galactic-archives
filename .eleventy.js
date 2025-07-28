@@ -1,14 +1,36 @@
-export default function(eleventyConfig) {
+import { globSync } from "glob";
+import fs from "fs";
+import matter from "gray-matter";
+
+export default function (eleventyConfig) {
   // Copy assets from `public` directly to the site root
-  eleventyConfig.addPassthroughCopy({ "public": "." });
+  eleventyConfig.addPassthroughCopy({ public: "." });
 
-  eleventyConfig.addFilter("json", value => JSON.stringify(value));
+  eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
-  const categories = ["Professions", "Quests"];
+  // Discover unique categories by scanning content files
+  const files = globSync("src/**/*.md", {
+    ignore: [
+      "src/_includes/**",
+      "src/layouts/**",
+      "src/styles/**",
+      "src/scripts/**",
+    ],
+  });
+
+  const categories = new Set();
+  for (const file of files) {
+    const { data } = matter(fs.readFileSync(file, "utf-8"));
+    if (data && data.category) {
+      categories.add(data.category);
+    }
+  }
 
   for (const cat of categories) {
     eleventyConfig.addCollection(cat.toLowerCase(), (collectionApi) =>
-      collectionApi.getAll().filter((item) => item.data.category === cat)
+      collectionApi
+        .getAll()
+        .filter((item) => item.data.category === cat)
     );
   }
 
