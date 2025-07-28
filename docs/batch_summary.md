@@ -48,3 +48,11 @@ Added client-side search powered by Fuse.js for fuzzy matching across titles, ca
 Added `scripts/fetchActivityLog.js` to pull recent changes from the SWGR wiki and save them to `data/recent-activity.json`.
 
 The script uses `axios` and `cheerio` to parse titles and links from the activity page.
+
+### Batch 006 – Internal Documentation Framework
+
+Created an `/internal/` route for private pages.
+
+Introduced `internal.njk` layout that mirrors the main site but displays an `access-warning.njk` banner.
+
+Added `src/internal/ms11-status.md` to track MS11 progress; these pages use `eleventyExcludeFromCollections: true` so they stay out of the sidebar and search results.
