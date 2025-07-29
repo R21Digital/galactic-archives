@@ -1,21 +1,28 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { jest } from '@jest/globals';
-
-const htmlSnippet = `
-<li class="mw-changeslist-title"><a href="/wiki/Page1">Page 1</a></li>
-<li class="mw-changeslist-title"><a href="/wiki/Page2">Page 2</a></li>
-`;
 
 import { fetchActivityOffline, OUTPUT_PATH } from '../scripts/fetchActivityLog.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const samplePath = path.join(__dirname, '../data/sample-activity.html');
+
+let original;
 
 beforeEach(() => {
-  if (fs.existsSync(OUTPUT_PATH)) fs.unlinkSync(OUTPUT_PATH);
-  fs.writeFileSync(samplePath, htmlSnippet);
+  if (fs.existsSync(OUTPUT_PATH)) {
+    original = fs.readFileSync(OUTPUT_PATH, 'utf-8');
+    fs.unlinkSync(OUTPUT_PATH);
+  } else {
+    original = null;
+  }
+});
+
+afterEach(() => {
+  if (original) {
+    fs.writeFileSync(OUTPUT_PATH, original);
+  } else if (fs.existsSync(OUTPUT_PATH)) {
+    fs.unlinkSync(OUTPUT_PATH);
+  }
 });
 
 test('fetchActivityOffline writes expected JSON', () => {
@@ -24,13 +31,13 @@ test('fetchActivityOffline writes expected JSON', () => {
   const data = JSON.parse(content);
   expect(data).toEqual([
     {
-      title: 'Page 1',
-      link: 'https://swgr.org/wiki/Page1',
+      title: 'Legacy Quest',
+      link: 'https://swgr.org/wiki/legacy/',
       timestamp: expect.any(String)
     },
     {
-      title: 'Page 2',
-      link: 'https://swgr.org/wiki/Page2',
+      title: 'Ranger',
+      link: 'https://swgr.org/wiki/ranger/',
       timestamp: expect.any(String)
     }
   ]);
