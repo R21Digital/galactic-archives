@@ -82,3 +82,9 @@ Created scripts/codex_validation_batch_008.py.
 Added `/api/quests.json` and `/api/professions.json` to expose the processed quest and profession data. These endpoints are hidden from navigation and search results via `eleventyExcludeFromCollections`.
 
 Provided sample `fetch` usage in the README.
+
+### Batch 010 – Codex Compatibility Updates
+
+Introduced offline fetching using `data/sample-activity.html` to allow Codex compatibility testing without internet access.
+Replaced `axios` with the native `fetch` API and added `USE_OFFLINE_MODE` and `WIKI_URL` toggles in `fetchActivityLog.js`.
+New `npm run fetch:activity` command supports offline and online modes via environment variables.
