@@ -168,3 +168,19 @@ a:hover {
   font-weight: bold;
   display: block;
 }
+
+.site-footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.site-footer a {
+  color: #80dfff;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
