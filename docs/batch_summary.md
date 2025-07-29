@@ -79,9 +79,7 @@ Created scripts/codex_validation_batch_008.py.
 
 ### Batch 009 – JSON API Endpoints
 
-Added `/api/quests.json` and `/api/professions.json` to expose the processed quest and profession data. These endpoints are hidden from navigation and search results via `eleventyExcludeFromCollections`.
-
-Provided sample `fetch` usage in the README.
+Added `/api/quests.json` and `/api/professions.json` to expose the processed quest and profession data. A new section in the README explains how to `fetch` these endpoints. Both routes are hidden from navigation and search results via `eleventyExcludeFromCollections`.
 
 ### Batch 010 – Codex Compatibility Updates
 
