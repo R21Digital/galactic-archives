@@ -49,11 +49,14 @@ Fetch recent edits from the SWGR wiki:
 npm run fetch:activity
 ```
 
-The script writes updates to `data/recent-activity.json`. Install its dependencies with:
+The script writes updates to `data/recent-activity.json`. It defaults to offline mode and
+parses `data/sample-activity.html`. Run the script directly with:
 
 ```bash
-npm install axios cheerio dotenv
+node scripts/fetchActivityLog.js
 ```
+
+Set `USE_OFFLINE_MODE=false` to fetch live data from the wiki instead.
 
 You can also override the default wiki URL or output location. Copy `.env.example` to `.env` and update the values:
 
