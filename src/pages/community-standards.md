@@ -2,7 +2,7 @@
 layout: static.njk
 permalink: /community-standards/
 title: Community Standards
-eleventyExcludeFromCollections: true
+category: Meta
 last_updated: 2025-07-27
 ---
 
