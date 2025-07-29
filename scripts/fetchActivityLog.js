@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const USE_OFFLINE_MODE = process.env.USE_OFFLINE_MODE !== 'false';
-const WIKI_URL = process.env.WIKI_URL || 'https://swgr.org/wiki/special/activity/';
+const DEFAULT_WIKI_URL = 'https://swgr.org/wiki/special/activity/';
 const SAMPLE_PATH = path.join(__dirname, '../data/sample-activity.html');
 const OUTPUT_PATH = process.env.OUTPUT_PATH || path.join(__dirname, '../data/recent-activity.json');
 
@@ -21,9 +21,10 @@ export function fetchActivityOffline() {
       const link = $(el).find('a').attr('href');
       const title = $(el).text().trim();
       if (title && link) {
+        const baseUrl = process.env.WIKI_URL || DEFAULT_WIKI_URL;
         changes.push({
           title,
-          link: `https://swgr.org${link}`,
+          link: new URL(link, baseUrl).href,
           timestamp: new Date().toISOString()
         });
       }
@@ -38,7 +39,8 @@ export function fetchActivityOffline() {
 
 export async function fetchActivityOnline() {
   try {
-    const res = await fetch(WIKI_URL);
+    const wikiUrl = process.env.WIKI_URL || DEFAULT_WIKI_URL;
+    const res = await fetch(wikiUrl);
     const html = await res.text();
     const $ = load(html);
     const changes = [];
@@ -49,7 +51,7 @@ export async function fetchActivityOnline() {
       if (title && link) {
         changes.push({
           title,
-          link: `https://swgr.org${link}`,
+          link: new URL(link, wikiUrl).href,
           timestamp: new Date().toISOString()
         });
       }

@@ -58,7 +58,8 @@ node scripts/fetchActivityLog.js
 
 Set `USE_OFFLINE_MODE=false` to fetch live data from the wiki instead. When this
 flag is disabled the script calls an asynchronous `fetchActivityOnline()`
-function that downloads the page defined by `WIKI_URL` using `fetch`.
+function that downloads the page defined by `WIKI_URL` using `fetch`. You can
+override this endpoint by setting the `WIKI_URL` environment variable.
 
 You can also override the default wiki URL or output location. Copy `.env.example` to `.env` and update the values:
 
