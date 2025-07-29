@@ -1,19 +1,19 @@
 import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
-import axios from 'axios';
 import { load } from 'cheerio';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const WIKI_URL = process.env.WIKI_URL || 'https://swgr.org/wiki/special/activity/';
+const USE_OFFLINE_MODE = process.env.USE_OFFLINE_MODE !== 'false';
+const SAMPLE_PATH = path.join(__dirname, '../data/sample-activity.html');
 const OUTPUT_PATH = process.env.OUTPUT_PATH || path.join(__dirname, '../data/recent-activity.json');
 
-export async function fetchActivity() {
+export function fetchActivityOffline() {
   try {
-    const { data } = await axios.get(WIKI_URL);
-    const $ = load(data);
+    const html = fs.readFileSync(SAMPLE_PATH, 'utf-8');
+    const $ = load(html);
     const changes = [];
 
     $('.mw-changeslist-title').each((_, el) => {
@@ -35,8 +35,8 @@ export async function fetchActivity() {
   }
 }
 
-export { OUTPUT_PATH };
+export { OUTPUT_PATH, USE_OFFLINE_MODE };
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  fetchActivity();
+  fetchActivityOffline();
 }
