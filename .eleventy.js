@@ -61,6 +61,7 @@ export default function (eleventyConfig) {
           category: item.data.category,
           tags: item.data.tags,
           url: item.url,
+          last_updated: item.data.last_updated,
         };
       });
   });
