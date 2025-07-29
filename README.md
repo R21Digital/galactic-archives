@@ -117,7 +117,8 @@ Eleventy scans every Markdown file for a `category` value in its front matter an
 
 ## JSON API
 
-Use the following endpoints to access the raw Profession and Quest data generated for the site:
+Use the following endpoints to access the raw Profession and Quest data generated for the site.
+See the [JSON API overview](src/api/index.md) for details on each endpoint:
 
 - `/api/professions.json`
 - `/api/quests.json`
