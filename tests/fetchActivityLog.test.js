@@ -58,17 +58,17 @@ test('USE_OFFLINE_MODE=false triggers online fetch', async () => {
   const mod = await import(moduleUrl.href);
   await mod.fetchActivityOnline();
 
-  expect(fetchMock).toHaveBeenCalled();
+  expect(fetchMock).toHaveBeenCalledWith('https://example.com/activity/');
   const data = JSON.parse(fs.readFileSync(mod.OUTPUT_PATH, 'utf-8'));
   expect(data).toEqual([
     {
       title: 'Legacy Quest',
-      link: 'https://swgr.org/wiki/legacy/',
+      link: 'https://example.com/wiki/legacy/',
       timestamp: expect.any(String)
     },
     {
       title: 'Ranger',
-      link: 'https://swgr.org/wiki/ranger/',
+      link: 'https://example.com/wiki/ranger/',
       timestamp: expect.any(String)
     }
   ]);
