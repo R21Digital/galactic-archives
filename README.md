@@ -117,9 +117,12 @@ Eleventy scans every Markdown file for a `category` value in its front matter an
 
 ## JSON API
 
-Two JSON endpoints expose the raw Profession and Quest data used to build the category pages. They live under `/api/professions.json` and `/api/quests.json`.
+Use the following endpoints to access the raw Profession and Quest data generated for the site:
 
-These files are generated at build time and include all processed entries. Because they are intended for programmatic access only, they are marked with `eleventyExcludeFromCollections: true` so the links never appear in navigation menus or the search index.
+- `/api/professions.json`
+- `/api/quests.json`
+
+These files are produced at build time and flagged with `eleventyExcludeFromCollections: true` so they stay off the main navigation and out of the search index.
 
 Example usage with `fetch`:
 
