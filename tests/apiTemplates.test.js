@@ -1,6 +1,7 @@
 import { jest } from '@jest/globals';
 import nunjucks from 'nunjucks';
 import fs from 'fs';
+import matter from 'gray-matter';
 import eleventyConfigFn, { slugifyCategory } from '../.eleventy.js';
 
 
@@ -85,4 +86,12 @@ test('professions and quests API templates render valid JSON arrays', () => {
     expect(obj).toHaveProperty('url');
     expect(obj).toHaveProperty('last_updated');
   });
+});
+
+test('API templates exclude themselves from collections via front matter', () => {
+  const profMatter = matter(fs.readFileSync('src/api/professions.json.njk', 'utf8'));
+  const questMatter = matter(fs.readFileSync('src/api/quests.json.njk', 'utf8'));
+
+  expect(profMatter.data.eleventyExcludeFromCollections).toBe(true);
+  expect(questMatter.data.eleventyExcludeFromCollections).toBe(true);
 });
