@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": "standard",
+  "env": {
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.js", "scripts/**/*.js"]
+    }
+  ]
+}

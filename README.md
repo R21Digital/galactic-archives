@@ -89,6 +89,14 @@ Generate a production build with:
 npm run build
 ```
 
+### Linting
+
+Run ESLint on the source and script files:
+
+```bash
+npm run lint
+```
+
 ### Python dependencies
 
 Install the required Python packages:
