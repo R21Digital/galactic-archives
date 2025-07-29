@@ -86,3 +86,9 @@ Added `/api/quests.json` and `/api/professions.json` to expose the processed que
 Introduced offline fetching using `data/sample-activity.html` to allow Codex compatibility testing without internet access.
 Replaced `axios` with the native `fetch` API and added `USE_OFFLINE_MODE` and `WIKI_URL` toggles in `fetchActivityLog.js`.
 New `npm run fetch:activity` command supports offline and online modes via environment variables.
+
+### Batch 014 – Blog System + Patch Notes
+
+Created a `/blog/` route to host news posts. Each entry is written in Markdown and rendered with the `blog-post.njk` layout.
+
+Introduced a `/patch-notes/` route for release notes. These Markdown files use the `patch-note.njk` layout.
