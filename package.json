@@ -11,7 +11,8 @@
     "import:fandom": "node scripts/import_swg_fandom.js",
     "fetch:activity": "node scripts/fetchActivityLog.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "classify": "node scripts/classifyContent.js"
+    "classify": "node scripts/classifyContent.js",
+    "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "keywords": [
     "star wars galaxies",
@@ -23,7 +24,9 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "jest": "^30.0.0"
+    "jest": "^30.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
