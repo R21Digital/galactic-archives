@@ -15,6 +15,6 @@ The Galactic Archives community lives on Discord, where you can:
 - Share builds, tips, or collections
 - Ask questions about the game
 
-[Join Our Discord](https://discord.gg/YOUR-DISCORD-CODE)
+[Join Our Discord](https://discord.gg/{{ env.DISCORD_INVITE_CODE | default('YOUR-DISCORD-CODE') }})
 
 We're also exploring future forums and events.
