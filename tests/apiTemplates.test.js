@@ -3,16 +3,12 @@ import nunjucks from 'nunjucks';
 import fs from 'fs';
 import eleventyConfigFn, { slugifyCategory } from '../.eleventy.js';
 
-class NullLoader extends nunjucks.Loader {
-  getSource(name) {
-    return { src: '', path: name, noCache: true };
-  }
-}
 
 function renderTemplate(templatePath, context) {
   const tpl = fs.readFileSync(templatePath, 'utf8');
   const content = tpl.split('---').slice(2).join('---').trim();
-  const env = new nunjucks.Environment(new NullLoader());
+  const loader = new nunjucks.FileSystemLoader('src/_includes');
+  const env = new nunjucks.Environment(loader);
   if (context.jsonFilter) {
     env.addFilter('json', context.jsonFilter);
   }
