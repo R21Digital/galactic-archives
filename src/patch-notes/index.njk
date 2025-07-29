@@ -1,0 +1,31 @@
+---
+pagination:
+  data: collections.patches
+  size: 1000
+  alias: notes
+permalink: "/patch-notes/"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    <div class="layout">
+      {% include "sidebar.njk" %}
+      <main class="content">
+        <h1>Patch Notes</h1>
+        <ul class="category-list">
+          {% for note in notes | sort(attribute='date') | reverse %}
+            <li>
+              <a href="{{ note.url }}">{{ note.data.title }}</a>
+              <span class="tag">{{ note.data.date | date('yyyy-MM-dd') }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </main>
+    </div>
+    {% include "footer.njk" %}
+  </body>
+</html>

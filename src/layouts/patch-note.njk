@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.njk" %}
+  </head>
+  <body>
+    <div class="layout">
+      {% include "sidebar.njk" %}
+      <main class="content">
+        {% include "searchbox.njk" %}
+        {% include "breadcrumbs.njk" %}
+        <header class="page-header">
+          <h1>{{ title }}</h1>
+          <p class="page-meta">
+            <em>Patch Date: {{ last_updated }}</em>
+          </p>
+        </header>
+        <article class="page-body">
+          {{ content | safe }}
+        </article>
+      </main>
+    </div>
+    {% include "footer.njk" %}
+  </body>
+</html>
