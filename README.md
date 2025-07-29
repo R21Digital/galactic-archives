@@ -114,3 +114,21 @@ The site includes a private `/internal/` section used for team-only resources. P
 ## Categories
 
 Eleventy scans every Markdown file for a `category` value in its front matter and builds a collection for each unique category. Listing pages like `/professions/` and `/quests/` use the `src/layouts/categories/index.njk` layout to display these collections. When you add `category: MyCategory` to a page, it automatically shows up on `/mycategory/` if that listing page exists.
+
+## JSON API
+
+Two JSON endpoints expose the raw Profession and Quest data used to build the category pages. They live under `/api/professions.json` and `/api/quests.json`.
+
+These files are generated at build time and include all processed entries. Because they are intended for programmatic access only, they are marked with `eleventyExcludeFromCollections: true` so the links never appear in navigation menus or the search index.
+
+Example usage with `fetch`:
+
+```javascript
+fetch('/api/quests.json')
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+fetch('/api/professions.json')
+  .then(res => res.json())
+  .then(data => console.log(data));
+```

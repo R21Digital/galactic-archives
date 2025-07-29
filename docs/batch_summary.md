@@ -76,3 +76,9 @@ Extended `main.css` with `.category-grid` styles.
 
 The landing page now automatically links to every discovered category.
 Created scripts/codex_validation_batch_008.py.
+
+### Batch 009 – JSON API Endpoints
+
+Added `/api/quests.json` and `/api/professions.json` to expose the processed quest and profession data. These endpoints are hidden from navigation and search results via `eleventyExcludeFromCollections`.
+
+Provided sample `fetch` usage in the README.
