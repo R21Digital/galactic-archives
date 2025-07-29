@@ -2,8 +2,6 @@
 permalink: /api/quests.json
 eleventyExcludeFromCollections: true
 ---
-[
-{% for item in collections.quests %}
-  {{ {"title": item.data.title, "category": item.data.category, "tags": item.data.tags, "url": item.url, "last_updated": item.data.last_updated} | json | safe }}{% if not loop.last %},{% endif %}
-{% endfor %}
-]
+{% from "../_includes/json-feed.njk" import jsonFeed %}
+{{ jsonFeed("quests") }}
+
