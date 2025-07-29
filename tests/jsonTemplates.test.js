@@ -74,3 +74,76 @@ test('search-index template renders valid JSON array', () => {
     expect(obj).toHaveProperty('last_updated');
   });
 });
+
+test('quests and professions templates render valid JSON arrays', () => {
+  const collections = {};
+  let jsonFilter;
+  const mockConfig = {
+    addPassthroughCopy: jest.fn(),
+    addFilter: (name, fn) => {
+      if (name === 'json') jsonFilter = fn;
+    },
+    addCollection: (name, fn) => {
+      collections[name] = fn;
+    },
+  };
+
+  // Register collections and filters
+  eleventyConfigFn(mockConfig);
+
+  const items = [
+    {
+      data: {
+        title: 'Legacy Quest',
+        category: 'Quests',
+        tags: ['Story'],
+        last_updated: '2025-07-26',
+      },
+      url: '/legacy-quest/',
+    },
+    {
+      data: {
+        title: 'Ranger',
+        category: 'Professions',
+        tags: ['Ranged'],
+        last_updated: '2025-07-26',
+      },
+      url: '/ranger/',
+    },
+  ];
+
+  const collectionApi = { getAll: () => items };
+  const quests = collections['quests'](collectionApi);
+  const professions = collections['professions'](collectionApi);
+
+  const questsRendered = renderTemplate('src/api/quests.json.njk', {
+    collections: { quests },
+    jsonFilter,
+  });
+  const professionsRendered = renderTemplate('src/api/professions.json.njk', {
+    collections: { professions },
+    jsonFilter,
+  });
+
+  const questsParsed = JSON.parse(questsRendered);
+  const professionsParsed = JSON.parse(professionsRendered);
+
+  expect(Array.isArray(questsParsed)).toBe(true);
+  expect(Array.isArray(professionsParsed)).toBe(true);
+
+  questsParsed.forEach((obj) => {
+    expect(obj).toHaveProperty('title');
+    expect(obj).toHaveProperty('category');
+    expect(obj).toHaveProperty('tags');
+    expect(obj).toHaveProperty('url');
+    expect(obj).toHaveProperty('last_updated');
+  });
+
+  professionsParsed.forEach((obj) => {
+    expect(obj).toHaveProperty('title');
+    expect(obj).toHaveProperty('category');
+    expect(obj).toHaveProperty('tags');
+    expect(obj).toHaveProperty('url');
+    expect(obj).toHaveProperty('last_updated');
+  });
+});
