@@ -1,6 +1,7 @@
 import { globSync } from "glob";
 import fs from "fs";
 import matter from "gray-matter";
+import { DateTime } from "luxon";
 
 function slugifyCategory(name) {
   return name
@@ -15,6 +16,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
   eleventyConfig.addFilter("categorySlug", slugifyCategory);
+  eleventyConfig.addFilter("date", (value, format) =>
+    DateTime.fromJSDate(value === "now" ? new Date() : new Date(value)).toFormat(format)
+  );
 
   // Discover unique categories by scanning content files
   const files = globSync("src/**/*.md", {
