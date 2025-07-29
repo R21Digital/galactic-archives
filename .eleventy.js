@@ -55,20 +55,27 @@ export default function (eleventyConfig) {
     );
   }
 
-  eleventyConfig.addCollection("searchIndex", function (collectionApi) {
-    return collectionApi
-      .getAll()
-      .filter((item) => item.data.eleventyExcludeFromCollections !== true)
-      .map((item) => {
-        return {
-          title: item.data.title,
-          category: item.data.category,
-          tags: item.data.tags,
-          url: item.url,
-          last_updated: item.data.last_updated,
-        };
-      });
-  });
+    eleventyConfig.addCollection("searchIndex", function (collectionApi) {
+      return collectionApi
+        .getAll()
+        .filter((item) => item.data.eleventyExcludeFromCollections !== true)
+        .map((item) => {
+          return {
+            title: item.data.title,
+            category: item.data.category,
+            tags: item.data.tags,
+            url: item.url,
+            last_updated: item.data.last_updated,
+          };
+        });
+    });
+
+    eleventyConfig.addCollection("blog", (c) =>
+      c.getFilteredByGlob("src/blog/*.md")
+    );
+    eleventyConfig.addCollection("patches", (c) =>
+      c.getFilteredByGlob("src/patch-notes/*.md")
+    );
 
   // Pass through compiled styles from `src/styles` so `dist/styles/main.css`
   // is generated from that directory rather than `public`.
