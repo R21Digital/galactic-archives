@@ -75,3 +75,45 @@ test('categories from excluded files are not added to collections', () => {
   expect(collections).not.toHaveProperty(slugifyCategory('Home'));
   expect(collections).not.toHaveProperty(slugifyCategory('Internal'));
 });
+
+test('blog collection returns Markdown files from src/blog', () => {
+  const collections = {};
+  const mockConfig = {
+    addPassthroughCopy: jest.fn(),
+    addFilter: jest.fn(),
+    addCollection: (name, fn) => {
+      collections[name] = fn;
+    }
+  };
+
+  eleventyConfigFn(mockConfig);
+
+  expect(collections).toHaveProperty('blog');
+
+  const getFilteredByGlob = jest.fn().mockReturnValue(['post']);
+  const items = collections.blog({ getFilteredByGlob });
+
+  expect(getFilteredByGlob).toHaveBeenCalledWith('src/blog/*.md');
+  expect(items).toEqual(['post']);
+});
+
+test('patches collection returns Markdown files from src/patch-notes', () => {
+  const collections = {};
+  const mockConfig = {
+    addPassthroughCopy: jest.fn(),
+    addFilter: jest.fn(),
+    addCollection: (name, fn) => {
+      collections[name] = fn;
+    }
+  };
+
+  eleventyConfigFn(mockConfig);
+
+  expect(collections).toHaveProperty('patches');
+
+  const getFilteredByGlob = jest.fn().mockReturnValue(['patch']);
+  const items = collections.patches({ getFilteredByGlob });
+
+  expect(getFilteredByGlob).toHaveBeenCalledWith('src/patch-notes/*.md');
+  expect(items).toEqual(['patch']);
+});
