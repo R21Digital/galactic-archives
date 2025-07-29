@@ -1,5 +1,12 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import nunjucks from 'nunjucks';
+
+class NullLoader extends nunjucks.Loader {
+  getSource(name) {
+    return { src: '', path: name, noCache: true };
+  }
+}
 
 // Ensure categories layout includes searchbox and breadcrumbs partials
 // to verify that common components are rendered.
@@ -41,4 +48,17 @@ test('static pages render with static layout', () => {
     const { data } = matter(fs.readFileSync(file, 'utf8'));
     expect(data.layout).toBe('static.njk');
   });
+});
+
+test('footer renders the current year', () => {
+  const tpl = fs.readFileSync('src/_includes/footer.njk', 'utf8');
+  const env = new nunjucks.Environment(new NullLoader());
+  env.addFilter('date', (input, format) => {
+    const dt = input === 'now' ? new Date() : new Date(input);
+    if (format === 'yyyy') return dt.getFullYear().toString();
+    return '';
+  });
+  const html = env.renderString(tpl, {});
+  const year = new Date().getFullYear().toString();
+  expect(html).toContain(`&copy; ${year} Galactic Archives`);
 });
