@@ -43,34 +43,31 @@ node scripts/import_beholder_data.js <export_directory>
 
 ## Activity Monitor
 
-Fetch recent edits from the SWGR wiki:
+Fetch recent edits from the SWGR wiki. By default the monitor runs in **offline**
+mode using the bundled `data/sample-activity.html`:
 
 ```bash
 npm run fetch:activity
 ```
 
-The script writes updates to `data/recent-activity.json`. It defaults to offline mode and
-parses `data/sample-activity.html`. Run the script directly with:
+The parsed results are written to `data/recent-activity.json`.
+
+To download the live activity feed set `USE_OFFLINE_MODE=false` when invoking
+the script:
 
 ```bash
-node scripts/fetchActivityLog.js
+USE_OFFLINE_MODE=false npm run fetch:activity
 ```
 
-Set `USE_OFFLINE_MODE=false` to fetch live data from the wiki instead. When this
-flag is disabled the script calls an asynchronous `fetchActivityOnline()`
-function that downloads the page defined by `WIKI_URL` using `fetch`. You can
-override this endpoint by setting the `WIKI_URL` environment variable.
-
-You can also override the default wiki URL or output location. Copy `.env.example` to `.env` and update the values:
+Environment variables can also be configured in a `.env` file:
 
 ```bash
+USE_OFFLINE_MODE=false
 WIKI_URL=https://swgr.org/wiki/special/activity/
 OUTPUT_PATH=./data/recent-activity.json
 ```
 
-These values are loaded automatically when running the script.
-
-Parsed data is stored in `/data/raw`, to be transformed later by custom loaders.
+Running `node scripts/fetchActivityLog.js` will then honor these settings.
 
 ## Content Classification
 
