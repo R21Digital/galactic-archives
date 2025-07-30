@@ -76,7 +76,7 @@ export default function (eleventyConfig) {
       input: "src",
       includes: "_includes",
       layouts: "layouts",
-      data: "../data",
+      data: "_data",
       output: "dist"
     },
     markdownTemplateEngine: "njk",
