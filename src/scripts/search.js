@@ -1,6 +1,6 @@
 /* global lunr */
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async() => {
   let pages;
   try {
     const res = await fetch('/search-index.json');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  const idx = lunr(function () {
+  const idx = lunr(function() {
     this.ref('url');
     this.field('title');
     this.field('category');
