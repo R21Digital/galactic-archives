@@ -28,6 +28,24 @@ test('seo partial outputs default meta tags', () => {
   expect(html).toContain('twitter:card');
 });
 
+test('seo partial uses provided image', () => {
+  const tpl = fs.readFileSync('src/_includes/seo.njk', 'utf8');
+  const env = new nunjucks.Environment(new NullLoader());
+  const html = env.renderString(tpl, {
+    metadata: {
+      siteName: 'Site',
+      siteUrl: 'https://example.com',
+      siteDescription: 'Desc',
+      siteImage: '/default.png'
+    },
+    title: 'Post',
+    image: '/custom.png',
+    page: { url: '/post/' }
+  });
+  expect(html).toContain('<meta property="og:image" content="/custom.png" />');
+  expect(html).toContain('<meta name="twitter:image" content="/custom.png" />');
+});
+
 test('sitemap template lists provided pages', () => {
   const file = fs.readFileSync('src/sitemap.xml.njk', 'utf8');
   const { data, content } = matter(file);
