@@ -143,3 +143,37 @@ test('quests and professions templates render valid JSON arrays', () => {
     expect(obj).toHaveProperty('last_updated');
   });
 });
+
+test('search-index template parses mock collection data correctly', () => {
+  const sampleIndex = [
+    {
+      title: 'Item A',
+      category: 'Guides',
+      tags: ['intro'],
+      url: '/item-a/',
+      last_updated: '2025-07-20',
+    },
+    {
+      title: 'Item B',
+      category: 'Planets',
+      tags: ['explore'],
+      url: '/item-b/',
+      last_updated: '2025-07-21',
+    },
+  ];
+
+  const rendered = renderTemplate('src/search-index.json.njk', {
+    collections: { searchIndex: sampleIndex },
+    jsonFilter: JSON.stringify,
+  });
+
+  const parsed = JSON.parse(rendered);
+  expect(Array.isArray(parsed)).toBe(true);
+  parsed.forEach((obj) => {
+    expect(obj).toHaveProperty('title');
+    expect(obj).toHaveProperty('category');
+    expect(obj).toHaveProperty('tags');
+    expect(obj).toHaveProperty('url');
+    expect(obj).toHaveProperty('last_updated');
+  });
+});
