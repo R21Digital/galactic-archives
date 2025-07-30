@@ -1,128 +1,107 @@
 ---
 title: Combat System
 layout: base.njk
-description: Complete guide to SWG combat mechanics - melee, ranged, and special combat systems
+description: Master the fighting mechanics and techniques in SWG
 category: Systems
 ---
 
 # Combat System
 
-Complete guide to SWG combat mechanics including melee, ranged, and special combat systems.
+Master the fighting mechanics and techniques that form the core of SWG's combat experience.
 
 <div class="construction-notice">
-This page is under construction. We're working to add detailed combat system information.
+This page is under construction. We're working to add detailed Combat system information.
 </div>
 
 ## Overview
 
-The Combat system is the core fighting mechanic in SWG, encompassing melee combat, ranged combat, and special abilities. Understanding combat mechanics is essential for all players.
+The Combat system is the foundation of SWG's fighting mechanics. It encompasses melee combat, ranged combat, special abilities, and tactical positioning.
 
-## Core Mechanics
+## Combat Mechanics
 
-### Combat Types
-- **Melee Combat**: Close-quarters fighting with weapons and hand-to-hand
-- **Ranged Combat**: Long-distance fighting with firearms and energy weapons
-- **Special Combat**: Unique abilities and special attacks
-- **Group Combat**: Coordinated team fighting tactics
+### Basic Combat
+- **Attack Types**: Melee, ranged, and special attacks
+- **Damage Calculation**: How damage is calculated and applied
+- **Defense Systems**: Armor, shields, and evasion
+- **Combat Timing**: Initiative, action points, and cooldowns
 
-### Combat Stats
-- **Health**: Your character's life force
-- **Action**: Determines how many actions you can perform
-- **Mind**: Affects special abilities and force powers
-- **Stamina**: Influences endurance and recovery
+### Advanced Combat
+- **Special Abilities**: Unique skills and powers
+- **Combo Systems**: Chaining attacks for maximum effectiveness
+- **Tactical Positioning**: Movement and positioning in combat
+- **Group Combat**: Coordinating with allies
 
-### Combat Modifiers
-- **Weapon Damage**: Base damage of your weapon
-- **Armor Protection**: Damage reduction from armor
-- **Combat Speed**: How quickly you can attack
-- **Accuracy**: Chance to hit your target
-- **Critical Hits**: Special high-damage attacks
+## Combat Types
 
-## Combat Techniques
+### Melee Combat
+- **Swords**: Traditional melee weapons with various styles
+- **Vibro Weapons**: Advanced melee weapons with special properties
+- **Hand-to-Hand**: Unarmed combat techniques
+- **Heavy Weapons**: Large melee weapons for maximum damage
 
-### Melee Techniques
-- **Basic Attack**: Standard melee strike
-- **Power Attack**: High damage but slower
-- **Defensive Stance**: Reduced damage but better defense
-- **Counter Attack**: Respond to enemy attacks
-- **Combo Strikes**: Chain multiple attacks together
+### Ranged Combat
+- **Pistols**: Quick and accurate ranged weapons
+- **Rifles**: Long-range precision weapons
+- **Heavy Weapons**: Explosive and area damage weapons
+- **Special Weapons**: Unique ranged weapons with special effects
 
-### Ranged Techniques
-- **Aimed Shot**: High accuracy, lower damage
-- **Rapid Fire**: Fast attacks, lower accuracy
-- **Sniper Shot**: Maximum range and damage
-- **Suppressive Fire**: Area denial and crowd control
-
-### Special Abilities
-- **Force Powers**: Jedi and Sith special abilities
-- **Combat Specializations**: Profession-specific abilities
-- **Equipment Abilities**: Special weapon and armor effects
-- **Environmental Effects**: Terrain and weather impacts
+### Special Combat
+- **Force Powers**: Special abilities for Force-sensitive characters
+- **Grenades**: Explosive devices for area control
+- **Traps**: Environmental and mechanical traps
+- **Pets**: Companion creatures that assist in combat
 
 ## Combat Strategies
 
 ### Solo Combat
-- **Know Your Limits**: Don't engage enemies beyond your capability
-- **Use Terrain**: Take advantage of cover and positioning
-- **Manage Resources**: Conserve health, action, and mind
-- **Plan Your Approach**: Scout and prepare before engaging
+- **Target Selection**: Choose the right enemies to engage
+- **Resource Management**: Manage health, energy, and ammunition
+- **Positioning**: Use terrain and positioning to your advantage
+- **Timing**: Know when to attack, defend, or retreat
 
 ### Group Combat
-- **Coordinate Roles**: Assign tank, damage, and support roles
-- **Communicate**: Share information and coordinate attacks
-- **Support Each Other**: Heal and buff your teammates
-- **Focus Fire**: Concentrate damage on priority targets
+- **Role Assignment**: Define roles for each group member
+- **Coordination**: Coordinate attacks and abilities
+- **Communication**: Maintain clear communication during combat
+- **Support**: Provide support and healing to allies
 
-### PvP Combat
-- **Study Your Opponent**: Learn their abilities and patterns
-- **Adapt Your Strategy**: Change tactics based on the situation
-- **Use the Environment**: Take advantage of terrain and obstacles
-- **Stay Mobile**: Don't become an easy target
+## Equipment and Combat
 
-## Advanced Combat
+### Weapons
+- **Weapon Types**: Different weapon categories and their uses
+- **Weapon Stats**: Understanding damage, speed, and accuracy
+- **Weapon Maintenance**: Keeping weapons in optimal condition
+- **Weapon Specialization**: Focusing on specific weapon types
 
-### Weapon Mastery
-- **Specialization**: Focus on specific weapon types
-- **Proficiency**: Increase accuracy and damage with practice
-- **Mastery**: Unlock special abilities and techniques
-- **Legendary**: Achieve maximum weapon potential
+### Armor and Protection
+- **Armor Types**: Light, medium, and heavy armor
+- **Protection Systems**: Shields, barriers, and defensive abilities
+- **Resistance**: Understanding damage types and resistances
+- **Maintenance**: Keeping armor and protection systems working
 
-### Combat Stances
-- **Aggressive**: High damage, lower defense
-- **Defensive**: High defense, lower damage
-- **Balanced**: Equal offense and defense
-- **Specialized**: Unique stance for specific situations
+## Combat Professions
 
-### Combat Modifiers
-- **Buffs**: Temporary combat enhancements
-- **Debuffs**: Temporary combat penalties
-- **Equipment**: Gear that modifies combat abilities
-- **Consumables**: Items that provide temporary benefits
+### Combat-Focused Professions
+- [Combat](/database/professions/combat/) - Master melee combat
+- [Commando](/database/professions/commando/) - Heavy weapons specialist
+- [Bounty Hunter](/database/professions/bounty-hunter/) - Track and capture targets
 
-## Combat Tips
+### Support Professions
+- [Medic](/database/professions/medic/) - Healing and medical support
+- [Scout](/database/professions/scout/) - Survival and exploration
 
-- **Practice Regularly**: Combat skills improve with use
-- **Study Your Enemies**: Learn their weaknesses and patterns
-- **Optimize Your Gear**: Use the best equipment for your build
-- **Join Combat Groups**: Learn from experienced fighters
-- **Stay Updated**: Keep up with combat system changes
+## Getting Started
 
-## Related Systems
-
-### Profession Integration
-- **Combat Professions**: Specialized combat abilities
-- **Support Professions**: Healing and buffing capabilities
-- **Crafting Professions**: Creating combat equipment
-
-### Social Systems
-- **Guild Combat**: Large-scale organized fighting
-- **PvP Zones**: Areas for player versus player combat
-- **Combat Events**: Special organized combat activities
+1. **Learn the Basics**: Understand fundamental combat mechanics
+2. **Choose Your Style**: Decide between melee, ranged, or special combat
+3. **Practice Regularly**: Improve your skills through combat
+4. **Study Tactics**: Learn advanced combat strategies
+5. **Join Groups**: Practice group combat coordination
 
 ## Resources
 
-- [Combat Professions](/database/professions/combat/) - Combat-focused careers
-- [PvP System](/database/systems/pvp/) - Player versus player combat
-- [Weapon Crafting](/database/systems/crafting/) - Create combat equipment
+- [Combat Guide](/tools/combat-guide/) - Detailed combat tutorials
+- [Weapon Database](/tools/weapon-database/) - Compare weapons and stats
 - [Community Forum](/pages/forum/) - Discuss combat strategies
-- [Submit Content](/pages/submit-content/) - Share your combat guides 
+- [Submit Content](/pages/submit-content/) - Share your combat guides
+- [Patch Notes](/patch-notes/) - Stay updated on combat changes 

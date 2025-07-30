@@ -1,13 +1,13 @@
 ---
 title: Systems
 layout: base.njk
-description: Complete guide to SWG game systems - combat, crafting, housing, PvP, and more
+description: Complete guide to SWG game systems - combat, PvP, crafting, space, and more
 category: Systems
 ---
 
 # Systems
 
-Complete guide to all SWG game systems including combat mechanics, crafting, housing, and more.
+Master the various game systems and mechanics that make SWG unique and engaging.
 
 <div class="construction-notice">
 This page is under construction. We're working to add detailed information for each system.
@@ -17,118 +17,113 @@ This page is under construction. We're working to add detailed information for e
 
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   <a href="/database/systems/combat/" class="card">
-    <img src="/images/systems/combat.png" alt="Combat" />
+    <div class="card-icon">⚔️</div>
     <p>Combat</p>
   </a>
   <a href="/database/systems/pvp/" class="card">
-    <img src="/images/systems/pvp.png" alt="PvP" />
+    <div class="card-icon">🏆</div>
     <p>PvP</p>
   </a>
   <a href="/database/systems/space/" class="card">
-    <img src="/images/systems/space.png" alt="Space" />
+    <div class="card-icon">🚀</div>
     <p>Space</p>
   </a>
   <a href="/database/systems/crafting/" class="card">
-    <img src="/images/systems/crafting.png" alt="Crafting" />
+    <div class="card-icon">🔨</div>
     <p>Crafting</p>
   </a>
-  <a href="/database/systems/entertainer-buffs/" class="card">
-    <img src="/images/systems/entertainer_buffs.png" alt="Entertainer Buffs" />
+  <a href="/database/systems/entertainer/" class="card">
+    <div class="card-icon">🎭</div>
     <p>Entertainer Buffs</p>
   </a>
   <a href="/database/systems/gcw/" class="card">
-    <img src="/images/systems/gcw.png" alt="GCW" />
+    <div class="card-icon">🏛️</div>
     <p>GCW</p>
   </a>
-  <a href="/database/systems/vendor-bazaar/" class="card">
-    <img src="/images/systems/vendor_bazaar.png" alt="Vendor/Bazaar" />
+  <a href="/database/systems/vendor/" class="card">
+    <div class="card-icon">🏪</div>
     <p>Vendor/Bazaar</p>
   </a>
   <a href="/database/systems/housing/" class="card">
-    <img src="/images/systems/housing.png" alt="Housing" />
+    <div class="card-icon">🏠</div>
     <p>Housing</p>
   </a>
-  <a href="/database/systems/mounts-vehicles/" class="card">
-    <img src="/images/systems/mounts_vehicles.png" alt="Mounts & Vehicles" />
+  <a href="/database/systems/mounts/" class="card">
+    <div class="card-icon">🐾</div>
     <p>Mounts & Vehicles</p>
   </a>
   <a href="/database/systems/economy/" class="card">
-    <img src="/images/systems/economy.png" alt="Economy" />
+    <div class="card-icon">💰</div>
     <p>Economy</p>
   </a>
-  <a href="/database/systems/social/" class="card">
-    <img src="/images/systems/social.png" alt="Social" />
-    <p>Social</p>
+  <a href="/database/systems/loot/" class="card">
+    <div class="card-icon">💎</div>
+    <p>Loot</p>
   </a>
-  <a href="/database/systems/transportation/" class="card">
-    <img src="/images/systems/transportation.png" alt="Transportation" />
-    <p>Transportation</p>
+  <a href="/database/systems/pets/" class="card">
+    <div class="card-icon">🐾</div>
+    <p>Pets</p>
   </a>
 </div>
 
 ## System Categories
 
 ### Combat Systems
-- **Combat**: Melee, ranged, and special combat mechanics
+- **Combat**: Master the fighting mechanics and techniques
 - **PvP**: Player versus player combat and competitive play
-- **Space**: Space combat, ship customization, and space missions
+- **GCW**: Galactic Civil War faction-based combat
 
 ### Crafting & Economy
-- **Crafting**: Item creation, resource gathering, and manufacturing
-- **Vendor/Bazaar**: Player shops, trading, and market systems
-- **Economy**: Player-driven economy, inflation, and market dynamics
+- **Crafting**: Create weapons, armor, tools, and other items
+- **Vendor/Bazaar**: Buy, sell, and trade with other players
+- **Economy**: Understand the player-driven market system
 
 ### Social & Entertainment
-- **Entertainer Buffs**: Music, dance, and social buffs system
-- **Social**: Guilds, chat, and community features
-- **Housing**: Building, decorating, and player cities
+- **Entertainer Buffs**: Music and dance buffs for characters
+- **Housing**: Build and customize homes and guild halls
+- **Mounts & Vehicles**: Transportation and companion systems
 
-### Game Features
-- **GCW**: Galactic Civil War faction system
-- **Mounts & Vehicles**: Ground transportation and mounts
-- **Transportation**: Travel systems and navigation
-
-## System Features
-
-Each system page includes:
-
-### Core Mechanics
-- **How It Works**: Basic system explanation
-- **Rules & Limitations**: System constraints and requirements
-- **Progression**: How to advance within the system
-- **Integration**: How it connects to other systems
-
-### Advanced Features
-- **Specializations**: Advanced techniques and strategies
-- **Optimization**: Tips for maximum efficiency
-- **Meta Analysis**: Current trends and best practices
-- **Community Insights**: Player strategies and tips
-
-### Tools & Calculators
-- **System Calculators**: Tools for optimizing performance
-- **Planning Tools**: Resources for system mastery
-- **Tracking Tools**: Progress monitoring and goal setting
+### Advanced Systems
+- **Space**: Space combat and exploration
+- **Loot**: Item drops and rare equipment
+- **Pets**: Companion creatures and mounts
 
 ## Getting Started
 
-1. **Choose Your System**: Pick a system that interests you
-2. **Learn the Basics**: Understand core mechanics and rules
-3. **Practice**: Apply what you've learned in-game
-4. **Optimize**: Use advanced techniques and strategies
-5. **Contribute**: Share your knowledge with the community
+1. **Learn the Basics**: Start with fundamental systems like combat and crafting
+2. **Explore Advanced**: Move on to complex systems like space and GCW
+3. **Master Specializations**: Focus on specific systems that interest you
+4. **Join the Community**: Connect with other players for guidance
+5. **Stay Updated**: Check patch notes for system changes
 
-## System Tips
+## System Guides
 
-- **Start Simple**: Learn basic mechanics before advanced techniques
-- **Study Integration**: Understand how systems work together
-- **Join Communities**: Find mentors and experienced players
-- **Experiment**: Try different approaches to find what works for you
-- **Stay Updated**: Check patch notes for system changes
+### Beginner Systems
+- [Combat System](/database/systems/combat/) - Essential fighting mechanics
+- [Crafting System](/database/systems/crafting/) - Create items and equipment
+- [Vendor System](/database/systems/vendor/) - Buy and sell with other players
+
+### Advanced Systems
+- [PvP System](/database/systems/pvp/) - Competitive player combat
+- [Space System](/database/systems/space/) - Space travel and combat
+- [GCW System](/database/systems/gcw/) - Faction-based warfare
+
+### Social Systems
+- [Housing System](/database/systems/housing/) - Build and customize homes
+- [Entertainer Buffs](/database/systems/entertainer/) - Character enhancement
+- [Mounts & Vehicles](/database/systems/mounts/) - Transportation options
 
 ## Tools & Resources
 
-- [Stat Optimizer](/pages/stat-optimizer/) - Optimize your character builds
-- [System Calculators](/tools/system-calculators/) - Calculate optimal performance
-- [Community Forum](/pages/forum/) - Discuss strategies and share tips
+- [Stat Optimizer](/pages/stat-optimizer/) - Plan your character builds
+- [Gear Calculator](/tools/gear-calculator/) - Calculate optimal equipment
+- [Community Forum](/pages/forum/) - Discuss strategies with other players
 - [Submit Content](/pages/submit-content/) - Share your system guides
-- [Patch Notes](/patch-notes/) - Stay updated on system changes 
+
+## System Tips
+
+- **Start Simple**: Begin with basic systems before tackling complex ones
+- **Read Guides**: Use community resources to understand mechanics
+- **Practice Regularly**: Systems improve with use and experience
+- **Join Groups**: Many systems are designed for group play
+- **Stay Informed**: Keep up with system updates and changes 

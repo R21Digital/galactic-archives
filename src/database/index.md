@@ -1,7 +1,7 @@
 ---
 title: Database
 layout: base.njk
-description: Complete SWG database - professions, systems, and content organized for easy browsing
+description: Complete SWG database - professions, systems, content, and all game information
 category: Database
 ---
 
@@ -10,82 +10,84 @@ category: Database
 The complete SWG knowledge base organized into three main categories: Professions, Systems, and Content.
 
 <div class="construction-notice">
-This database is under construction. We're working to add detailed information for each category.
+This page is under construction. We're working to add detailed information for each category.
 </div>
 
 ## Main Categories
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-  <a href="/database/professions/" class="card">
-    <img src="/images/database/professions.png" alt="Professions" />
-    <h3>🧑‍🚀 Professions</h3>
-    <p>Complete guides for all SWG professions including skills, abilities, and leveling strategies.</p>
-    <div class="card-meta">Combat • Support • Crafting</div>
+  <a href="/database/professions/" class="category-card">
+    <div class="card-icon">🧑‍🚀</div>
+    <h3>Professions</h3>
+    <p>Master the various career paths available in SWG. Each profession offers unique abilities and specializations.</p>
+    <div class="card-meta">Combat • Crafting • Support</div>
   </a>
   
-  <a href="/database/systems/" class="card">
-    <img src="/images/database/systems.png" alt="Systems" />
-    <h3>🧩 Systems</h3>
-    <p>Game mechanics, combat systems, crafting, housing, and all major game features.</p>
-    <div class="card-meta">Combat • PvP • Crafting • Housing</div>
+  <a href="/database/systems/" class="category-card">
+    <div class="card-icon">🧩</div>
+    <h3>Systems</h3>
+    <p>Master the various game systems and mechanics that make SWG unique and engaging.</p>
+    <div class="card-meta">Combat • PvP • Crafting • Space</div>
   </a>
   
-  <a href="/database/content/" class="card">
-    <img src="/images/database/content.png" alt="Content" />
-    <h3>📦 Content</h3>
-    <p>Quests, theme parks, legacy content, heroics, and all explorable game content.</p>
+  <a href="/database/content/" class="category-card">
+    <div class="card-icon">📦</div>
+    <h3>Content</h3>
+    <p>Explore the rich content and quests available throughout the SWG universe.</p>
     <div class="card-meta">Quests • Theme Parks • Heroics</div>
   </a>
 </div>
 
+## Quick Access
+
+### Popular Professions
+- [Combat](/database/professions/combat/) - Master melee combat
+- [Medic](/database/professions/medic/) - Healing and medical support
+- [Crafting](/database/professions/crafting/) - Create weapons and armor
+- [Bounty Hunter](/database/professions/bounty-hunter/) - Track and capture targets
+
+### Essential Systems
+- [Combat System](/database/systems/combat/) - Master the fighting mechanics
+- [Crafting System](/database/systems/crafting/) - Create and improve items
+- [PvP System](/database/systems/pvp/) - Player versus player combat
+- [Housing System](/database/systems/housing/) - Build and customize homes
+
+### Featured Content
+- [Legacy Questline](/database/content/legacy-quest/) - Complete the main story
+- [Theme Parks](/database/content/theme-parks/) - Visit themed areas
+- [Heroics](/database/content/heroics/) - Challenging group content
+- [Collections](/database/content/collections/) - Collect rare items
+
+## Getting Started
+
+1. **Choose Your Path**: Decide between professions, systems, or content
+2. **Explore Categories**: Find the specific area that interests you
+3. **Master Systems**: Learn the game mechanics and features
+4. **Join the Community**: Connect with other players for guidance
+5. **Contribute**: Share your knowledge and discoveries
+
 ## Database Features
 
 ### Comprehensive Coverage
-- **All Professions**: Complete guides for every career path with skills and abilities
-- **Game Systems**: Detailed explanations of combat, crafting, housing, and more
-- **Content Database**: Quests, theme parks, and explorable content throughout the galaxy
+- **All Professions**: Complete guides for every career path
+- **Game Systems**: Detailed mechanics and features
+- **Content**: Quests, missions, and activities throughout the galaxy
 
 ### Interactive Tools
-- **Profession Guides**: Step-by-step progression and skill trees
-- **System Calculators**: Tools for optimizing builds and equipment
-- **Content Tracking**: Track your progress through quests and achievements
+- **Stat Optimizer**: Plan and optimize your character builds
+- **Professions Guide**: Step-by-step profession progression
+- **Guild Tracker**: Find and join player organizations
+- **Player Profiles**: Track community achievements
 
 ### Community Driven
 - **Submit Content**: Share your guides and discoveries
 - **Community Forum**: Discuss strategies and share tips
-- **User Contributions**: Help build the most comprehensive SWG database
-
-## Getting Started
-
-1. **Choose Your Category**: Browse Professions, Systems, or Content
-2. **Find Your Topic**: Use the search or browse by category
-3. **Read the Guides**: Detailed information and strategies
-4. **Use the Tools**: Interactive calculators and planners
-5. **Contribute**: Share your knowledge with the community
-
-## Quick Navigation
-
-### Professions
-- [Combat](/database/professions/combat/) - Melee and ranged combat
-- [Medic](/database/professions/medic/) - Healing and medical support
-- [Entertainer](/database/professions/entertainer/) - Entertainment and buffs
-- [Crafting](/database/professions/crafting/) - Item creation and economy
-
-### Systems
-- [Combat](/database/systems/combat/) - Combat mechanics and strategies
-- [Crafting](/database/systems/crafting/) - Item creation and resource gathering
-- [Housing](/database/systems/housing/) - Building and customization
-- [PvP](/database/systems/pvp/) - Player versus player combat
-
-### Content
-- [Legacy Questline](/database/content/legacy/) - Main story quests
-- [Theme Parks](/database/content/theme-parks/) - Themed content areas
-- [Heroics](/database/content/heroics/) - Group content and challenges
-- [Collections](/database/content/collections/) - Collectibles and achievements
+- **Leaderboards**: Track achievements and rankings
+- **User Profiles**: Showcase your characters and accomplishments
 
 ## Resources
 
-- [Community Forum](/pages/forum/) - Discuss strategies and share tips
+- [Tools](/pages/stat-optimizer/) - Interactive tools and calculators
+- [Community Forum](/pages/forum/) - Discuss strategies with other players
 - [Submit Content](/pages/submit-content/) - Share your guides and discoveries
-- [Search](/search/) - Find specific information quickly
 - [Patch Notes](/patch-notes/) - Stay updated on game changes 
