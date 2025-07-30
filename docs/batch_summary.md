@@ -34,13 +34,13 @@ Extended `main.css` with styles for breadcrumbs, headers, and meta info.
 
 ### Batch 004 – Search Integration
 
-Added client-side search powered by Fuse.js for fuzzy matching across titles, categories, and tags.
+Added client-side search powered by Lunr.js for full‑text matching across titles, categories, tags and page content.
 
 - New `searchbox.njk` partial inserts a search bar on every page.
-- `head.njk` now loads Fuse.js and a custom search script.
+- `head.njk` now loads Lunr.js and a custom search script.
 - `base.njk` includes the search box above breadcrumbs and displays metadata in a single block.
-- `search.js` initializes Fuse and renders results live as the user types.
-- Generated `search-index.json` lists title, category, tags, and URL for each page.
+- `search.js` initializes Lunr and renders results live as the user types.
+- Generated `search-index.json` lists title, category, tags, URL and the first 1000 characters of content for each page.
 - Added basic styling for the search components.
 
 ### Batch 005 – Special:Activity Monitor
