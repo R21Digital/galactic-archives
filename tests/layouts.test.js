@@ -27,19 +27,20 @@ test('layouts include footer partial', () => {
 });
 
 // The static pages should use the new layout and parse correctly
-test('static pages render with static layout', () => {
-  const files = [
-    'src/pages/privacy-policy.md',
-    'src/pages/terms-of-use.md',
-    'src/pages/mission.md',
-    'src/pages/what-is-this-site.md',
-    'src/pages/help.md',
-    'src/pages/community-standards.md',
-    'src/pages/community.md'
-  ];
-  files.forEach((file) => {
+test('static pages render with correct layouts', () => {
+  const expectations = {
+    'src/pages/privacy-policy.md': 'base.njk',
+    'src/pages/terms-of-use.md': 'base.njk',
+    'src/pages/mission.md': 'static.njk',
+    'src/pages/what-is-this-site.md': 'static.njk',
+    'src/pages/help.md': 'static.njk',
+    'src/pages/community-standards.md': 'static.njk',
+    'src/pages/community.md': 'static.njk'
+  };
+
+  Object.entries(expectations).forEach(([file, layout]) => {
     const { data } = matter(fs.readFileSync(file, 'utf8'));
-    expect(data.layout).toBe('static.njk');
+    expect(data.layout).toBe(layout);
   });
 });
 
