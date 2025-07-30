@@ -2,7 +2,7 @@
   <h2>Navigation</h2>
   {% set lastCategory = null %}
   {% for page in collections.all | sort(attribute='data.category') %}
-    {% if not page.data.eleventyExcludeFromCollections %}
+    {% if page.data.category and not page.data.eleventyExcludeFromCollections %}
       {% if page.data.category != lastCategory %}
         {% if lastCategory %}
           </ul>
