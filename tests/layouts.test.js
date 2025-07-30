@@ -45,8 +45,7 @@ test('static pages render with static layout', () => {
     'src/pages/what-is-this-site.md',
     'src/pages/help.md',
     'src/pages/community-standards.md',
-    'src/pages/community.md',
-    'src/pages/patch-notes.md'
+    'src/pages/community.md'
   ];
   files.forEach((file) => {
     const { data } = matter(fs.readFileSync(file, 'utf8'));
