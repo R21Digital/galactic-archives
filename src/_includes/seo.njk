@@ -1,0 +1,17 @@
+{% set metaDesc = description or metadata.siteDescription %}
+<title>{{ title }} | {{ metadata.siteName }}</title>
+<meta name="description" content="{{ metaDesc }}" />
+<link rel="canonical" href="{{ metadata.siteUrl }}{{ page.url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }} | {{ metadata.siteName }}" />
+<meta property="og:description" content="{{ metaDesc }}" />
+<meta property="og:url" content="{{ metadata.siteUrl }}{{ page.url }}" />
+{% if metadata.siteImage %}
+<meta property="og:image" content="{{ metadata.siteImage }}" />
+{% endif %}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ title }} | {{ metadata.siteName }}" />
+<meta name="twitter:description" content="{{ metaDesc }}" />
+{% if metadata.siteImage %}
+<meta name="twitter:image" content="{{ metadata.siteImage }}" />
+{% endif %}
