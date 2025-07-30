@@ -25,6 +25,17 @@ You can also install the Python packages via `make deps`.
 
 These steps are required prior to using `npm test` or `pytest`.
 
+## Environment File
+
+Copy `.env.example` to `.env` and adjust the values as needed. The file
+defines environment variables used by scripts and the site itself. For
+instance, `DISCORD_INVITE_CODE` controls the invite link shown on
+`/community/`:
+
+```bash
+DISCORD_INVITE_CODE=YOUR-DISCORD-CODE
+```
+
 ## Data Import
 
 The `/scripts` folder contains scrapers to pull data from:
