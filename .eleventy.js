@@ -84,6 +84,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/scripts": "scripts" });
   // Ensure the search index JSON is available in the output
   eleventyConfig.addPassthroughCopy("search-index.json");
+  // Expose generated sitemap
+  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     dir: {

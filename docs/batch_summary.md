@@ -96,3 +96,10 @@ Introduced a `/patch-notes/` route for release notes. These Markdown files use t
 ### Batch 013 – Community & Help Pages
 
 Added /help/, /community-standards/, and /community/ pages for site guidance and community engagement. Updated the footer with new links and improved styling.
+
+### Batch 015 – SEO Metadata & Sitemap
+
+Added metadata.js for global site information.
+Created seo.njk partial for meta tags and updated head.njk to include it.
+Implemented sitemap.xml generation using collections.all and updated Eleventy config to pass it through.
+
