@@ -17,6 +17,7 @@
     "enhance:alt": "node scripts/altTextEnhancer.js --all",
     "monitor:patches": "node scripts/patchNoteMonitor.js --monitor",
     "export:ms11": "node scripts/ms11Export.js --full",
+    "optimize:stats": "node scripts/statOptimizer.js",
     "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "keywords": [
