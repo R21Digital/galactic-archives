@@ -103,3 +103,7 @@ Added metadata.js for global site information.
 Created seo.njk partial for meta tags and updated head.njk to include it.
 Implemented sitemap.xml generation using collections.all and updated Eleventy config to pass it through.
 
+### Batch 016 – SEO Validation Script
+
+Created `scripts/codex_validation_batch_016.py` to check that `src/_data/metadata.js`, `src/_includes/seo.njk`, and `src/sitemap.xml.njk` exist.
+

@@ -180,3 +180,9 @@ Global site details like the name, base URL and description live in
 `src/_data/metadata.js`. These values populate the `seo.njk` partial which
 generates meta tags for each page. A sitemap is built from `collections.all`
 and written to `/sitemap.xml` during the Eleventy build.
+
+Run the validation script to confirm these files exist:
+
+```bash
+python scripts/codex_validation_batch_016.py
+```
