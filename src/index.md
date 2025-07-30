@@ -9,8 +9,8 @@ description: The ultimate knowledge base for SWG – powered by the community an
   <h1>👁️ SWGDB</h1>
   <p>Welcome to **SWGDB**, a fan-powered wiki and intelligence hub for all things related to **SWG**, including the SWG Restoration server.</p>
   <div class="hero-actions">
-    <a href="/quests/" class="btn btn-primary">Browse Quests</a>
-    <a href="/professions/" class="btn btn-secondary">Explore Professions</a>
+    <a href="/professions/" class="btn btn-primary">Browse Professions</a>
+    <a href="/content/" class="btn btn-secondary">Explore Content</a>
   </div>
 </div>
 
@@ -20,7 +20,7 @@ description: The ultimate knowledge base for SWG – powered by the community an
     <div class="feature-icon">📚</div>
     <h3>Structured Wiki</h3>
     <p>Deep coverage of quests, professions, factions, and game systems with comprehensive guides and walkthroughs.</p>
-    <a href="/quests/" class="btn btn-secondary">Explore Content</a>
+    <a href="/content/" class="btn btn-secondary">Explore Content</a>
   </div>
   
   <div class="feature-card">
@@ -38,45 +38,90 @@ description: The ultimate knowledge base for SWG – powered by the community an
   </div>
 </div>
 
-<!-- Quick Links Section -->
+<!-- Main Categories Section -->
 <h2>🚀 Explore Key Areas</h2>
 
 <div class="category-grid">
-  <a href="/quests/" class="category-card">
-    <h3>🗺 Quests</h3>
-    <p>From the Legacy questline to Kashyyyk and Theme Parks, discover every path and step.</p>
-    <div class="card-meta">Comprehensive walkthroughs</div>
-  </a>
-  
   <a href="/professions/" class="category-card">
-    <h3>🎯 Professions</h3>
-    <p>Understand how to master combat, support, and crafting careers with build guides and leveling tips.</p>
-    <div class="card-meta">Build guides & strategies</div>
+    <h3>⚔️ All Professions</h3>
+    <p>Master combat, crafting, and support careers with detailed build guides and leveling strategies.</p>
+    <div class="card-meta">Combat • Crafting • Support</div>
   </a>
   
-  <a href="/factions/" class="category-card">
-    <h3>🏛 Factions</h3>
-    <p>Join the Rebellion or Empire. Learn how faction points, bases, and PvP systems work.</p>
-    <div class="card-meta">Faction strategies</div>
+  <a href="/content/" class="category-card">
+    <h3>🎮 Content & Systems</h3>
+    <p>Complete guides to quests, GCW, factions, crafting, housing, and all game systems.</p>
+    <div class="card-meta">Quests • GCW • Crafting</div>
   </a>
   
-  <a href="/systems/" class="category-card">
-    <h3>⚙️ Systems & Mechanics</h3>
-    <p>Dive into the core gameplay mechanics: travel, housing, GCW, space, and more.</p>
-    <div class="card-meta">Game mechanics</div>
+  <a href="/universe/" class="category-card">
+    <h3>🌌 Universe</h3>
+    <p>Explore planets, cities, lore, species, and the vast Star Wars galaxy.</p>
+    <div class="card-meta">Planets • Lore • Species</div>
   </a>
   
-  <a href="/blog/" class="category-card">
-    <h3>📝 Blog & Updates</h3>
-    <p>Developer notes, patch changes, and archival essays about SWG history.</p>
-    <div class="card-meta">Latest updates</div>
+  <a href="/pages/stat-optimizer/" class="category-card">
+    <h3>⚡ Stat Optimizer</h3>
+    <p>Plan and optimize your character builds with our advanced stat calculator.</p>
+    <div class="card-meta">Character Planning</div>
   </a>
   
-  <a href="/pages/submit-content/" class="category-card">
-    <h3>✍️ Submit Content</h3>
-    <p>Contribute your knowledge to the community. Share guides, hints, and discoveries.</p>
-    <div class="card-meta">Community contributions</div>
+  <a href="/pages/leaderboard/" class="category-card">
+    <h3>🏆 Leaderboard</h3>
+    <p>Track bounty hunter kills, achievements, and community rankings.</p>
+    <div class="card-meta">Community Rankings</div>
   </a>
+  
+  <a href="/pages/forum/" class="category-card">
+    <h3>💬 Community</h3>
+    <p>Join discussions, share strategies, and connect with other SWG players.</p>
+    <div class="card-meta">Forums • Profiles</div>
+  </a>
+</div>
+
+<!-- Quick Links Section -->
+<h2>📋 Quick Access</h2>
+
+<div class="hub-grid">
+  <div class="content-card">
+    <h3>🗺️ Popular Quests</h3>
+    <ul>
+      <li><a href="/quests/legacy/">Legacy Questline</a></li>
+      <li><a href="/quests/kashyyyk/">Kashyyyk Quests</a></li>
+      <li><a href="/quests/theme-parks/">Theme Park Missions</a></li>
+      <li><a href="/quests/faction/">Faction Quests</a></li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h3>⚔️ Combat Guides</h3>
+    <ul>
+      <li><a href="/professions/combat/">Combat Professions</a></li>
+      <li><a href="/gcw/">Galactic Civil War</a></li>
+      <li><a href="/pvp/">PvP Systems</a></li>
+      <li><a href="/bounty-system/">Bounty Hunting</a></li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h3>🔨 Crafting & Economy</h3>
+    <ul>
+      <li><a href="/crafting/">Crafting Systems</a></li>
+      <li><a href="/economy/">Player Economy</a></li>
+      <li><a href="/vendors/">Vendor Guide</a></li>
+      <li><a href="/housing/">Housing System</a></li>
+    </ul>
+  </div>
+
+  <div class="content-card">
+    <h3>🌍 Popular Planets</h3>
+    <ul>
+      <li><a href="/planets/tatooine/">Tatooine</a></li>
+      <li><a href="/planets/naboo/">Naboo</a></li>
+      <li><a href="/planets/endor/">Endor</a></li>
+      <li><a href="/planets/kashyyyk/">Kashyyyk</a></li>
+    </ul>
+  </div>
 </div>
 
 <!-- Mission Statement -->
