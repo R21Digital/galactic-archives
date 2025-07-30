@@ -82,6 +82,8 @@ export default function (eleventyConfig) {
   // is generated from that directory rather than `public`.
   eleventyConfig.addPassthroughCopy({ "src/styles": "styles" });
   eleventyConfig.addPassthroughCopy({ "src/scripts": "scripts" });
+  // Ensure the search index JSON is available in the output
+  eleventyConfig.addPassthroughCopy("search-index.json");
 
   return {
     dir: {
