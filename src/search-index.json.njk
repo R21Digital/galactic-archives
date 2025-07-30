@@ -3,7 +3,7 @@ permalink: search-index.json
 eleventyExcludeFromCollections: true
 ---
 [
-{% for item in collections.searchIndex %}
+{% for item in searchIndex %}
   {{ item | json | safe }}{% if not loop.last %},{% endif %}
 {% endfor %}
 ]

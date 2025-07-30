@@ -1,34 +1,46 @@
 import { jest } from '@jest/globals';
-import eleventyConfigFn from '../.eleventy.js';
+
+jest.unstable_mockModule('glob', () => ({
+  globSync: jest.fn(),
+}));
+
+jest.unstable_mockModule('fs', () => ({
+  default: {
+    readFileSync: jest.fn(),
+  },
+}));
+
+let searchIndexFn, globSync, readFileSync;
+
+beforeAll(async () => {
+  const glob = await import('glob');
+  globSync = glob.globSync;
+  const fsMod = await import('fs');
+  readFileSync = fsMod.default.readFileSync;
+  const mod = await import('../src/_data/searchIndex.js');
+  searchIndexFn = mod.default;
+});
 
 test('search index excludes eleventyExcludeFromCollections items', () => {
-  const collections = {};
-  const mockConfig = {
-    addPassthroughCopy: jest.fn(),
-    addFilter: jest.fn(),
-    addCollection: (name, fn) => {
-      collections[name] = fn;
-    },
-  };
+  globSync.mockReturnValue(['src/a.md', 'src/b.md']);
+  readFileSync.mockImplementation((file) => {
+    if (file === 'src/a.md') {
+      return `---\ntitle: Visible\n---\nVisible content`;
+    }
+    if (file === 'src/b.md') {
+      return `---\ntitle: Hidden\neleventyExcludeFromCollections: true\n---\nHidden content`;
+    }
+  });
 
-  eleventyConfigFn(mockConfig);
-
-  const items = [
-    { data: { title: 'Visible', eleventyExcludeFromCollections: false } , url: '/visible/' },
-    { data: { title: 'Hidden', eleventyExcludeFromCollections: true }, url: '/hidden/' },
-  ];
-
-  const collectionApi = {
-    getAll: () => items,
-  };
-
-  const result = collections['searchIndex'](collectionApi);
+  const result = searchIndexFn();
   expect(result).toEqual([
     {
       title: 'Visible',
       category: undefined,
       tags: undefined,
-      url: '/visible/',
+      url: '/a/',
+      last_updated: undefined,
+      content: 'Visible content',
     },
   ]);
 });

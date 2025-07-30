@@ -56,20 +56,6 @@ export default function (eleventyConfig) {
     );
   }
 
-    eleventyConfig.addCollection("searchIndex", function (collectionApi) {
-      return collectionApi
-        .getAll()
-        .filter((item) => item.data.eleventyExcludeFromCollections !== true)
-        .map((item) => {
-          return {
-            title: item.data.title,
-            category: item.data.category,
-            tags: item.data.tags,
-            url: item.url,
-            last_updated: item.data.last_updated,
-          };
-        });
-    });
 
     eleventyConfig.addCollection("blog", (c) =>
       c.getFilteredByGlob("src/blog/*.md")
@@ -82,8 +68,6 @@ export default function (eleventyConfig) {
   // is generated from that directory rather than `public`.
   eleventyConfig.addPassthroughCopy({ "src/styles": "styles" });
   eleventyConfig.addPassthroughCopy({ "src/scripts": "scripts" });
-  // Ensure the search index JSON is available in the output
-  eleventyConfig.addPassthroughCopy("search-index.json");
   // Expose generated sitemap
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 

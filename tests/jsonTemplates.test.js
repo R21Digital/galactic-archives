@@ -16,47 +16,39 @@ function renderTemplate(templatePath, context) {
 }
 
 test('search-index template renders valid JSON array', () => {
-  const collections = {};
   let jsonFilter;
   const mockConfig = {
     addPassthroughCopy: jest.fn(),
     addFilter: (name, fn) => {
       if (name === 'json') jsonFilter = fn;
     },
-    addCollection: (name, fn) => {
-      collections[name] = fn;
-    },
+    addCollection: jest.fn(),
   };
 
-  // Register collections and filters
+  // Register filters
   eleventyConfigFn(mockConfig);
 
-  const items = [
+  const searchIndex = [
     {
-      data: {
-        title: 'Page One',
-        category: 'Guides',
-        tags: ['intro'],
-        last_updated: '2025-07-27',
-      },
+      title: 'Page One',
+      category: 'Guides',
+      tags: ['intro'],
       url: '/page-one/',
+      last_updated: '2025-07-27',
+      content: 'foo',
     },
     {
-      data: {
-        title: 'Page Two',
-        category: 'Planets',
-        tags: ['outdoor'],
-        last_updated: '2025-07-26',
-      },
+      title: 'Page Two',
+      category: 'Planets',
+      tags: ['outdoor'],
       url: '/page-two/',
+      last_updated: '2025-07-26',
+      content: 'bar',
     },
   ];
 
-  const collectionApi = { getAll: () => items };
-  const searchIndex = collections['searchIndex'](collectionApi);
-
   const rendered = renderTemplate('src/search-index.json.njk', {
-    collections: { searchIndex },
+    searchIndex,
     jsonFilter,
   });
 
@@ -68,6 +60,7 @@ test('search-index template renders valid JSON array', () => {
     expect(obj).toHaveProperty('tags');
     expect(obj).toHaveProperty('url');
     expect(obj).toHaveProperty('last_updated');
+    expect(obj).toHaveProperty('content');
   });
 });
 
@@ -152,6 +145,7 @@ test('search-index template parses mock collection data correctly', () => {
       tags: ['intro'],
       url: '/item-a/',
       last_updated: '2025-07-20',
+      content: 'A',
     },
     {
       title: 'Item B',
@@ -159,11 +153,12 @@ test('search-index template parses mock collection data correctly', () => {
       tags: ['explore'],
       url: '/item-b/',
       last_updated: '2025-07-21',
+      content: 'B',
     },
   ];
 
   const rendered = renderTemplate('src/search-index.json.njk', {
-    collections: { searchIndex: sampleIndex },
+    searchIndex: sampleIndex,
     jsonFilter: JSON.stringify,
   });
 
@@ -175,5 +170,6 @@ test('search-index template parses mock collection data correctly', () => {
     expect(obj).toHaveProperty('tags');
     expect(obj).toHaveProperty('url');
     expect(obj).toHaveProperty('last_updated');
+    expect(obj).toHaveProperty('content');
   });
 });
