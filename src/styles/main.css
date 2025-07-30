@@ -502,24 +502,35 @@ tr:hover {
 .footer {
   background-color: var(--color-bg-secondary);
   border-top: 1px solid var(--color-border);
-  padding: var(--space-2xl);
+  padding: var(--space-xl) 0;
   margin-top: var(--space-3xl);
   text-align: center;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
   text-align: left;
+  padding: 0 var(--space-xl);
 }
 
 .footer-section h3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin-bottom: var(--space-md);
   color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-section p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
 }
 
 .footer-section ul {
@@ -529,12 +540,14 @@ tr:hover {
 }
 
 .footer-section li {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .footer-section a {
   color: var(--color-text-secondary);
   text-decoration: none;
+  font-size: 0.875rem;
+  transition: var(--transition);
 }
 
 .footer-section a:hover {
@@ -542,12 +555,41 @@ tr:hover {
 }
 
 .footer-bottom {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-lg);
   padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
   text-align: center;
   color: var(--color-text-muted);
   font-size: 0.875rem;
+}
+
+.footer-bottom p {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-muted);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+.footer-links .separator {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
 }
 
 /* Search results */
@@ -640,12 +682,23 @@ tr:hover {
   }
   
   .footer {
-    padding: var(--space-lg);
+    padding: var(--space-lg) 0;
   }
   
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 0 var(--space-md);
+    gap: var(--space-md);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .footer-links .separator {
+    display: none;
   }
 }
 
