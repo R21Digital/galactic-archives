@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', async() => {
         const page = pages.find(p => p.url === ref);
         if (page) {
           const li = document.createElement('li');
-          li.innerHTML = `<a href="${page.url}">${page.title}</a>`;
+          const link = document.createElement('a');
+          link.href = page.url;
+          link.textContent = page.title;
+          li.appendChild(link);
           resultsList.appendChild(li);
         }
       });
