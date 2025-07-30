@@ -113,3 +113,9 @@ Introduced a friendly home page with an inviting mission statement.
 It links directly to major categories like Quests, Professions, Factions, Systems, and the Blog.
 If a hero image or site logo is provided, it appears at the top of the page.
 
+### Batch 018 – Polish, Footer, and Mobile Tweaks
+
+Added a `footer.njk` partial to display global links.
+Updated `site.css` for mobile-friendly layouts.
+Added placeholder privacy policy and terms of service pages.
+
