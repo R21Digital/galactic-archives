@@ -1,4 +1,5 @@
 {% set metaDesc = description or metadata.siteDescription %}
+{% set previewImage = image or metadata.siteImage %}
 <title>{{ title }} | {{ metadata.siteName }}</title>
 <meta name="description" content="{{ metaDesc }}" />
 <link rel="canonical" href="{{ metadata.siteUrl }}{{ page.url }}" />
@@ -6,12 +7,12 @@
 <meta property="og:title" content="{{ title }} | {{ metadata.siteName }}" />
 <meta property="og:description" content="{{ metaDesc }}" />
 <meta property="og:url" content="{{ metadata.siteUrl }}{{ page.url }}" />
-{% if metadata.siteImage %}
-<meta property="og:image" content="{{ metadata.siteImage }}" />
+{% if previewImage %}
+<meta property="og:image" content="{{ previewImage }}" />
 {% endif %}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ title }} | {{ metadata.siteName }}" />
 <meta name="twitter:description" content="{{ metaDesc }}" />
-{% if metadata.siteImage %}
-<meta name="twitter:image" content="{{ metadata.siteImage }}" />
+{% if previewImage %}
+<meta name="twitter:image" content="{{ previewImage }}" />
 {% endif %}
