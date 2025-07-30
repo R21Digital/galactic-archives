@@ -152,6 +152,10 @@ The site includes a private `/internal/` section used for team-only resources. P
 
 Eleventy scans every Markdown file for a `category` value in its front matter and builds a collection for each unique category. Listing pages like `/professions/` and `/quests/` use the `src/layouts/categories/index.njk` layout to display these collections. When you add `category: MyCategory` to a page, it automatically shows up on `/mycategory/` if that listing page exists.
 
+## Search
+
+Every page contains a small search box that performs client-side lookups using Lunr.js. The build process outputs `/search-index.json` which includes each page's title, category, tags, URL and a truncated snippet of its content. The `/search/` page provides a dedicated interface, but results update live anywhere as you type.
+
 ## JSON API
 
 Use the following endpoints to access the raw Profession and Quest data generated for the site.
