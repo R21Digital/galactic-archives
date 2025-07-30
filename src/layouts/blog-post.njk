@@ -12,7 +12,7 @@
         <header class="page-header">
           <h1>{{ title }}</h1>
           <p class="page-meta">
-            <em>Published: {{ last_updated }}</em>
+            <em>Published: {{ last_updated | date('yyyy-MM-dd') }}</em>
           </p>
         </header>
         <article class="page-body">
