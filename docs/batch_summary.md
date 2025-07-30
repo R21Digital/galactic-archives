@@ -107,3 +107,9 @@ Implemented sitemap.xml generation using collections.all and updated Eleventy co
 
 Created `scripts/codex_validation_batch_016.py` to check that `src/_data/metadata.js`, `src/_includes/seo.njk`, and `src/sitemap.xml.njk` exist.
 
+### Batch 017 – Welcome Landing Page
+
+Introduced a friendly home page with an inviting mission statement.
+It links directly to major categories like Quests, Professions, Factions, Systems, and the Blog.
+If a hero image or site logo is provided, it appears at the top of the page.
+
