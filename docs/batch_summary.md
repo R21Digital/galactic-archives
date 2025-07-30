@@ -92,3 +92,7 @@ New `npm run fetch:activity` command supports offline and online modes via envir
 Created a `/blog/` route to host news posts. Each entry is written in Markdown and rendered with the `blog-post.njk` layout.
 
 Introduced a `/patch-notes/` route for release notes. These Markdown files use the `patch-note.njk` layout.
+
+### Batch 013 – Community & Help Pages
+
+Added /help/, /community-standards/, and /community/ pages for site guidance and community engagement. Updated the footer with new links and improved styling.
