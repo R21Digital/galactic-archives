@@ -68,8 +68,6 @@ export default function (eleventyConfig) {
   // is generated from that directory rather than `public`.
   eleventyConfig.addPassthroughCopy({ "src/styles": "styles" });
   eleventyConfig.addPassthroughCopy({ "src/scripts": "scripts" });
-  // Expose generated sitemap
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
     dir: {
