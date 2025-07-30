@@ -1,90 +1,91 @@
 ---
 title: Database
 layout: base.njk
-description: Complete SWG database - all professions, skills, and character information
+description: Complete SWG database - professions, systems, and content organized for easy browsing
 category: Database
 ---
 
 # Database
 
-Complete information about all SWG professions, skills, and character systems.
+The complete SWG knowledge base organized into three main categories: Professions, Systems, and Content.
 
 <div class="construction-notice">
-This page is under construction. We're working to add detailed information for each profession.
+This database is under construction. We're working to add detailed information for each category.
 </div>
 
-## All Professions
+## Main Categories
 
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-  <a href="/professions/combat/" class="card">
-    <img src="/images/professions/combat.png" alt="Combat" />
-    <p>Combat</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <a href="/database/professions/" class="card">
+    <img src="/images/database/professions.png" alt="Professions" />
+    <h3>🧑‍🚀 Professions</h3>
+    <p>Complete guides for all SWG professions including skills, abilities, and leveling strategies.</p>
+    <div class="card-meta">Combat • Support • Crafting</div>
   </a>
-  <a href="/professions/medic/" class="card">
-    <img src="/images/professions/medic.png" alt="Medic" />
-    <p>Medic</p>
+  
+  <a href="/database/systems/" class="card">
+    <img src="/images/database/systems.png" alt="Systems" />
+    <h3>🧩 Systems</h3>
+    <p>Game mechanics, combat systems, crafting, housing, and all major game features.</p>
+    <div class="card-meta">Combat • PvP • Crafting • Housing</div>
   </a>
-  <a href="/professions/entertainer/" class="card">
-    <img src="/images/professions/entertainer.png" alt="Entertainer" />
-    <p>Entertainer</p>
-  </a>
-  <a href="/professions/scout/" class="card">
-    <img src="/images/professions/scout.png" alt="Scout" />
-    <p>Scout</p>
-  </a>
-  <a href="/professions/crafting/" class="card">
-    <img src="/images/professions/crafting.png" alt="Crafting" />
-    <p>Crafting</p>
-  </a>
-  <a href="/professions/smuggler/" class="card">
-    <img src="/images/professions/smuggler.png" alt="Smuggler" />
-    <p>Smuggler</p>
-  </a>
-  <a href="/professions/commando/" class="card">
-    <img src="/images/professions/commando.png" alt="Commando" />
-    <p>Commando</p>
-  </a>
-  <a href="/professions/bounty-hunter/" class="card">
-    <img src="/images/professions/bounty_hunter.png" alt="Bounty Hunter" />
-    <p>Bounty Hunter</p>
+  
+  <a href="/database/content/" class="card">
+    <img src="/images/database/content.png" alt="Content" />
+    <h3>📦 Content</h3>
+    <p>Quests, theme parks, legacy content, heroics, and all explorable game content.</p>
+    <div class="card-meta">Quests • Theme Parks • Heroics</div>
   </a>
 </div>
 
-## Profession Categories
+## Database Features
 
-### Combat Professions
-- **Combat**: Master melee combat with swords, vibro weapons, and hand-to-hand techniques
-- **Commando**: Heavy weapons specialist using grenades, rocket launchers, and heavy armor
-- **Bounty Hunter**: Track and capture targets across the galaxy with advanced tracking skills
+### Comprehensive Coverage
+- **All Professions**: Complete guides for every career path with skills and abilities
+- **Game Systems**: Detailed explanations of combat, crafting, housing, and more
+- **Content Database**: Quests, theme parks, and explorable content throughout the galaxy
 
-### Support Professions
-- **Medic**: Heal wounds, cure diseases, and provide medical support to your allies
-- **Entertainer**: Provide entertainment, buffs, and social interaction through music and dance
-- **Scout**: Master of survival, tracking, and exploration with advanced outdoor skills
+### Interactive Tools
+- **Profession Guides**: Step-by-step progression and skill trees
+- **System Calculators**: Tools for optimizing builds and equipment
+- **Content Tracking**: Track your progress through quests and achievements
 
-### Crafting Professions
-- **Crafting**: Create weapons, armor, tools, and other items using various crafting skills
-- **Smuggler**: Navigate the criminal underworld with stealth, deception, and smuggling skills
+### Community Driven
+- **Submit Content**: Share your guides and discoveries
+- **Community Forum**: Discuss strategies and share tips
+- **User Contributions**: Help build the most comprehensive SWG database
 
 ## Getting Started
 
-1. **Choose Your Path**: Decide between combat, crafting, or support roles
-2. **Plan Your Build**: Research specializations and skill trees
-3. **Gather Resources**: Collect materials and equipment
-4. **Practice Skills**: Train and improve your abilities
-5. **Join the Community**: Connect with other players for guidance
+1. **Choose Your Category**: Browse Professions, Systems, or Content
+2. **Find Your Topic**: Use the search or browse by category
+3. **Read the Guides**: Detailed information and strategies
+4. **Use the Tools**: Interactive calculators and planners
+5. **Contribute**: Share your knowledge with the community
 
-## Tools & Resources
+## Quick Navigation
 
-- [Stat Optimizer](/pages/stat-optimizer/) - Plan your character build
-- [Professions Guide](/tools/professions-guide/) - Detailed profession guides
-- [Gear Calculator](/tools/gear-calculator/) - Calculate optimal equipment
-- [Community Forum](/pages/forum/) - Discuss strategies with other players
+### Professions
+- [Combat](/database/professions/combat/) - Melee and ranged combat
+- [Medic](/database/professions/medic/) - Healing and medical support
+- [Entertainer](/database/professions/entertainer/) - Entertainment and buffs
+- [Crafting](/database/professions/crafting/) - Item creation and economy
 
-## Profession Tips
+### Systems
+- [Combat](/database/systems/combat/) - Combat mechanics and strategies
+- [Crafting](/database/systems/crafting/) - Item creation and resource gathering
+- [Housing](/database/systems/housing/) - Building and customization
+- [PvP](/database/systems/pvp/) - Player versus player combat
 
-- **Start Simple**: Begin with basic skills before specializing
-- **Balance Your Build**: Mix combat and support skills for versatility
-- **Join a Guild**: Find mentors and resources in player organizations
-- **Experiment**: Try different specializations to find your playstyle
-- **Stay Updated**: Check patch notes for profession changes 
+### Content
+- [Legacy Questline](/database/content/legacy/) - Main story quests
+- [Theme Parks](/database/content/theme-parks/) - Themed content areas
+- [Heroics](/database/content/heroics/) - Group content and challenges
+- [Collections](/database/content/collections/) - Collectibles and achievements
+
+## Resources
+
+- [Community Forum](/pages/forum/) - Discuss strategies and share tips
+- [Submit Content](/pages/submit-content/) - Share your guides and discoveries
+- [Search](/search/) - Find specific information quickly
+- [Patch Notes](/patch-notes/) - Stay updated on game changes 
