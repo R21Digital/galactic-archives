@@ -24,7 +24,8 @@ pip install -r requirements.txt
 
 You can also install the Python packages via `make deps`.
 
-These steps are required prior to using `npm test` or `pytest`.
+These steps are required prior to using `npm test` or `pytest`. You can also
+run `make test` to install dependencies and execute all tests in one command.
 
 ## Environment File
 
@@ -119,13 +120,21 @@ pip install -r requirements.txt
 
 ## Testing
 
-Run the test suite with:
+Install dependencies if you haven't already:
 
 ```bash
+npm install
+pip install -r requirements.txt
+```
+
+Run the test suites:
+
+```bash
+npm test
 pytest
 ```
 
-Be sure to install dependencies first by running `pip install -r requirements.txt`.
+Alternatively run `make test` to perform all of the above in one step.
 
 ## Internal Routes
 
