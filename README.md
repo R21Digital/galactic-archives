@@ -11,6 +11,7 @@ This fan-made project is not affiliated with or endorsed by Lucasfilm or Disney.
 ## Requirements
 
 - Node.js 18 (see `.nvmrc`)
+- `cheerio` pinned to `1.0.0-rc.12` for Node 18 compatibility
 
 ## Setup
 

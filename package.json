@@ -29,7 +29,7 @@
     "eslint-config-standard": "^17.1.0"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "1.0.0-rc.12",
     "dotenv": "^17.2.1",
     "glob": "^10.4.5",
     "gray-matter": "^4.0.3"
