@@ -12,7 +12,7 @@ If you’re new to the site or to Star Wars Galaxies, here are a few helpful lin
 
 - [What is This Site?](/what-is-this-site/)
 - [Mission Statement](/mission/)
-- [Patch Notes](/patch-notes/) *(coming soon)*
+- [Patch Notes](/patch-notes/)
 - [Join the Community](/community/)
 - Use the search bar at the top of any page to find quests, professions, planets, and more.
 
