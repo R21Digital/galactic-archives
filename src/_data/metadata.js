@@ -1,6 +1,6 @@
 export default {
-  siteName: 'Galactic Archives',
-  siteUrl: 'https://example.com',
-  siteDescription: 'A unified Star Wars Galaxies knowledge hub.',
+  siteName: 'SWGDB',
+  siteUrl: 'https://swgdb.com',
+  siteDescription: 'A unified SWG knowledge hub.',
   siteImage: '/images/og-image.png'
 };

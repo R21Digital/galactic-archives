@@ -8,7 +8,7 @@ tags:
 last_updated: 2025-07-27
 ---
 
-The Galactic Archives exposes a small JSON API for programmatic access to select site data. Each endpoint returns an array of objects used to build the related pages.
+SWGDB exposes a small JSON API for programmatic access to select site data. Each endpoint returns an array of objects used to build the related pages.
 
 ## Available Endpoints
 

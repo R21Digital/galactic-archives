@@ -1,8 +1,8 @@
 {
-  "name": "galactic-archives",
+  "name": "swgdb",
   "version": "1.0.0",
   "type": "module",
-  "description": "A unified Star Wars Galaxies knowledge hub combining official Restoration Wiki, SWG Fandom data, and exclusive resources powered by The Eye of the Galactic Beholder.",
+  "description": "A unified SWG knowledge hub combining official Restoration Wiki, SWG Fandom data, and exclusive resources powered by The Eye of the Galactic Beholder.",
   "main": ".eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
@@ -12,10 +12,16 @@
     "fetch:activity": "node scripts/fetchActivityLog.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "classify": "node scripts/classifyContent.js",
+    "classify:enhanced": "node scripts/enhancedClassifier.js",
+    "classify:incoming": "node scripts/enhancedClassifier.js --incoming",
+    "enhance:alt": "node scripts/altTextEnhancer.js --all",
+    "monitor:patches": "node scripts/patchNoteMonitor.js --monitor",
+    "export:ms11": "node scripts/ms11Export.js --full",
     "lint": "eslint \"src/**/*.js\" \"scripts/**/*.js\""
   },
   "keywords": [
-    "star wars galaxies",
+    "swg",
+    "galaxies",
     "wiki",
     "eleventy",
     "static site"

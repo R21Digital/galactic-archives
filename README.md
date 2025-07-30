@@ -1,6 +1,6 @@
-# Galactic Archives
+# SWGDB
 
-A unified Star Wars Galaxies knowledge hub combining:
+A unified SWG knowledge hub combining:
 - SWG Restoration Wiki
 - SWG Fandom data
 - Exclusive in-game intelligence curated by the Eye of the Galactic Beholder

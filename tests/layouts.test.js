@@ -54,5 +54,5 @@ test('footer renders the current year', () => {
   });
   const html = env.renderString(tpl, {});
   const year = new Date().getFullYear().toString();
-  expect(html).toContain(`&copy; ${year} Galactic Archives`);
+  expect(html).toContain(`&copy; ${year} SWGDB`);
 });

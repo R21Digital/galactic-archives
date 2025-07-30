@@ -8,4 +8,4 @@ last_updated: 2025-07-27
 
 ## What Is This Site?
 
-Galactic Archives combines community-created guides with original research curated by The Eye of the Galactic Beholder. It exists to catalog every corner of SWG for posterity.
+SWGDB combines community-created guides with original research curated by The Eye of the Galactic Beholder. It exists to catalog every corner of SWG for posterity.

@@ -10,4 +10,4 @@ last_updated: 2025-07-27
 
 # Lore
 
-Explore the rich narrative of Star Wars Galaxies — both canon and fan-made.
+Explore the rich narrative of SWG — both canon and fan-made.

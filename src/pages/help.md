@@ -8,7 +8,7 @@ last_updated: 2025-07-27
 
 ## Need Help?
 
-If you’re new to the site or to Star Wars Galaxies, here are a few helpful links:
+If you're new to the site or to SWG, here are a few helpful links:
 
 - [What is This Site?](/what-is-this-site/)
 - [Mission Statement](/mission/)

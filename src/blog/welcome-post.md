@@ -6,4 +6,4 @@ tags: [news, launch]
 last_updated: 2025-07-28
 ---
 
-This is the inaugural blog post for Galactic Archives.
+This is the inaugural blog post for SWGDB.

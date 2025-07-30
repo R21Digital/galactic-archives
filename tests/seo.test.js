@@ -14,7 +14,7 @@ test('seo partial outputs default meta tags', () => {
   const html = env.renderString(tpl, {
     metadata: {
       siteName: 'Site',
-      siteUrl: 'https://example.com',
+      siteUrl: 'https://swgdb.com',
       siteDescription: 'Desc',
       siteImage: '/img.png'
     },
@@ -34,7 +34,7 @@ test('seo partial uses provided image', () => {
   const html = env.renderString(tpl, {
     metadata: {
       siteName: 'Site',
-      siteUrl: 'https://example.com',
+      siteUrl: 'https://swgdb.com',
       siteDescription: 'Desc',
       siteImage: '/default.png'
     },
@@ -55,7 +55,7 @@ test('sitemap template lists provided pages', () => {
     collections: {
       all: [ { url: '/page-one/', data: {} } ]
     },
-    metadata: { siteUrl: 'https://example.com' }
+    metadata: { siteUrl: 'https://swgdb.com' }
   });
-  expect(xml).toContain('<loc>https://example.com/page-one/</loc>');
+  expect(xml).toContain('<loc>https://swgdb.com/page-one/</loc>');
 });

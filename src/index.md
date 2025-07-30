@@ -1,12 +1,12 @@
 ---
-title: Welcome to the Galactic Archives
+title: Welcome to SWGDB
 layout: base.njk
-description: The ultimate knowledge base for Star Wars Galaxies – powered by the community and enhanced by the secret Eye of the Beholder.
+description: The ultimate knowledge base for SWG – powered by the community and enhanced by the secret Eye of the Beholder.
 ---
 
-# 👁️ Galactic Archives
+# 👁️ SWGDB
 
-Welcome to **Galactic Archives**, a fan-powered wiki and intelligence hub for all things related to **Star Wars Galaxies**, including the SWG Restoration server.
+Welcome to **SWGDB**, a fan-powered wiki and intelligence hub for all things related to **SWG**, including the SWG Restoration server.
 
 This site is:
 

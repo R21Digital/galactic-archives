@@ -8,7 +8,7 @@ last_updated: 2025-07-27
 
 ## Connect With Us
 
-The Galactic Archives community lives on Discord, where you can:
+The SWGDB community lives on Discord, where you can:
 
 - Suggest new content
 - Report site issues
