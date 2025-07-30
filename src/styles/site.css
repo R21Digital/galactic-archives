@@ -16,7 +16,7 @@ p {
 }
 
 /* Footer design */
-.site-footer {
+.footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
@@ -26,12 +26,12 @@ p {
   margin-top: 3rem;
 }
 
-.site-footer a {
+.footer a {
   color: #00bfff;
   margin: 0 0.5rem;
 }
 
-.site-footer a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
