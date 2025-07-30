@@ -17,4 +17,6 @@ The Galactic Archives community lives on Discord, where you can:
 
 [Join Our Discord](https://discord.gg/{{ env.DISCORD_INVITE_CODE | default('YOUR-DISCORD-CODE') }})
 
+Please review our [Community Standards](/community-standards/) before participating.
+
 We're also exploring future forums and events.
