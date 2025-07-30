@@ -4,7 +4,8 @@ import matter from "gray-matter";
 import { DateTime } from "luxon";
 
 function slugifyCategory(name) {
-  return name
+  if (!name) return '';
+  return String(name)
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
