@@ -4,26 +4,83 @@
     {% include "head.njk" %}
   </head>
   <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="site-title">
+        <span class="site-logo">👁️</span>
+        <a href="/">SWGDB</a>
+      </div>
+      
+      <div class="header-actions">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Layout -->
     <div class="layout">
-      {% include "sidebar.njk" %}
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        {% include "sidebar.njk" %}
+      </aside>
+
+      <!-- Main Content -->
       <main class="content">
-        {% include "searchbox.njk" %}
+        <!-- Search Bar -->
+        <div class="search-container">
+          {% include "searchbox.njk" %}
+        </div>
+
+        <!-- Breadcrumbs -->
         {% include "breadcrumbs.njk" %}
+
+        <!-- Page Header -->
         <header class="page-header">
           <h1>{{ title }}</h1>
-          <p class="page-meta">
-            <strong>Category:</strong> {{ category }} |
-            <strong>Tags:</strong> {{ tags | default([]) | join(', ') }} |
-            <em>Last updated: {{ last_updated }}</em>
-          </p>
+          {% if category or tags or last_updated %}
+          <div class="page-meta">
+            {% if category %}<strong>Category:</strong> {{ category }}{% endif %}
+            {% if tags %}{% if category %} | {% endif %}<strong>Tags:</strong> {{ tags | default([]) | join(', ') }}{% endif %}
+            {% if last_updated %}{% if category or tags %} | {% endif %}<em>Last updated: {{ last_updated }}</em>{% endif %}
+          </div>
+          {% endif %}
         </header>
 
+        <!-- Page Content -->
         <article class="page-body">
           {{ content | safe }}
         </article>
       </main>
     </div>
-    <link rel="stylesheet" href="/styles/site.css" />
+
+    <!-- Footer -->
     {% include "footer.njk" %}
+
+    <!-- Navigation Script -->
+    <script>
+      // Mobile navigation toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const sidebar = document.getElementById('sidebar');
+      
+      if (navToggle && sidebar) {
+        navToggle.addEventListener('click', () => {
+          sidebar.classList.toggle('collapsed');
+        });
+      }
+
+      // Theme toggle (optional)
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-theme');
+          const isDark = document.body.classList.contains('dark-theme');
+          themeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+      }
+    </script>
   </body>
 </html>

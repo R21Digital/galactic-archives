@@ -1,25 +1,58 @@
-<aside class="sidebar">
+<nav class="sidebar-nav">
   <h2>Navigation</h2>
-  {% set lastCategory = null %}
-  {% for page in collections.all | sort(attribute='data.category') %}
-    {% if page.data.category and not page.data.eleventyExcludeFromCollections %}
-      {% if page.data.category != lastCategory %}
-        {% if lastCategory %}
-          </ul>
-        {% endif %}
-        {% set lastCategory = page.data.category %}
-        <h3><a href="/{{ page.data.category | categorySlug }}/">{{ page.data.category }}</a></h3>
-        <ul>
-          <li><a href="/{{ page.data.category | categorySlug }}/">All {{ page.data.category }}</a></li>
-      {% endif %}
-      {% if page.url != '/' + (page.data.category | categorySlug) + '/' %}
-        <li>
-          <a href="{{ page.url }}">{{ page.data.title }}</a>
-        </li>
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-  {% if lastCategory %}
+  
+  <!-- Main Categories -->
+  <div class="nav-section">
+    <h3>Main Content</h3>
+    <ul>
+      <li><a href="/quests/">🗺 Quests</a></li>
+      <li><a href="/professions/">🎯 Professions</a></li>
+      <li><a href="/factions/">🏛 Factions</a></li>
+      <li><a href="/planets/">🌍 Planets</a></li>
+      <li><a href="/lore/">📖 Lore</a></li>
     </ul>
-  {% endif %}
-</aside>
+  </div>
+
+  <!-- Tools -->
+  <div class="nav-section">
+    <h3>Tools</h3>
+    <ul>
+      <li><a href="/pages/stat-optimizer/">⚡ Stat Optimizer</a></li>
+      <li><a href="/pages/leaderboard/">🏆 Leaderboard</a></li>
+      <li><a href="/search/">🔍 Search</a></li>
+      <li><a href="/api/">🔧 API</a></li>
+    </ul>
+  </div>
+
+  <!-- Community -->
+  <div class="nav-section">
+    <h3>Community</h3>
+    <ul>
+      <li><a href="/pages/forum/">💬 Forum</a></li>
+      <li><a href="/pages/profile/">👤 Profiles</a></li>
+      <li><a href="/pages/submit-content/">✍️ Submit Content</a></li>
+      <li><a href="/pages/community/">👥 Community</a></li>
+    </ul>
+  </div>
+
+  <!-- Information -->
+  <div class="nav-section">
+    <h3>Information</h3>
+    <ul>
+      <li><a href="/blog/">📝 Blog</a></li>
+      <li><a href="/patch-notes/">📋 Patch Notes</a></li>
+      <li><a href="/about/">ℹ️ About</a></li>
+      <li><a href="/pages/help/">❓ Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Legal -->
+  <div class="nav-section">
+    <h3>Legal</h3>
+    <ul>
+      <li><a href="/pages/privacy-policy/">🔒 Privacy</a></li>
+      <li><a href="/pages/terms-of-use/">📜 Terms</a></li>
+      <li><a href="/pages/community-standards/">⚖️ Standards</a></li>
+    </ul>
+  </div>
+</nav>
