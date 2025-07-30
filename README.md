@@ -119,6 +119,14 @@ Be sure to install dependencies first by running `pip install -r requirements.tx
 
 The site includes a private `/internal/` section used for team-only resources. Pages in this directory set `eleventyExcludeFromCollections: true`, so they remain hidden from generated indexes. Search engines are also instructed not to crawl these routes via the `Disallow: /internal/` rule in [`public/robots.txt`](public/robots.txt). The search index honors this flag as well.
 
+## Help & Community Routes
+
+- `/help/` - Overview of site features and resources for new players.
+- `/community/` - Invitation page for joining our Discord and sharing tips.
+- `/community-standards/` - Guidelines for respectful participation.
+- `/blog/` - News posts and project updates.
+- `/patch-notes/` - Archive of recent changes and fixes.
+
 ## Categories
 
 Eleventy scans every Markdown file for a `category` value in its front matter and builds a collection for each unique category. Listing pages like `/professions/` and `/quests/` use the `src/layouts/categories/index.njk` layout to display these collections. When you add `category: MyCategory` to a page, it automatically shows up on `/mycategory/` if that listing page exists.
