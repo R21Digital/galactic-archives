@@ -2,7 +2,7 @@ import { globSync } from 'glob';
 import fs from 'fs';
 import matter from 'gray-matter';
 
-export default function () {
+export default function() {
   const files = globSync('src/**/*.md', {
     ignore: [
       'src/_includes/**',
@@ -19,6 +19,8 @@ export default function () {
     const { data, content } = matter(fileContents);
     if (data.eleventyExcludeFromCollections) continue;
 
+    const snippet = content.slice(0, 1000);
+
     const relative = file
       .replace(/^src\//, '')
       .replace(/index\.md$/, '')
@@ -31,7 +33,7 @@ export default function () {
       tags: data.tags,
       url,
       last_updated: data.last_updated,
-      content
+      content: snippet
     });
   }
 
