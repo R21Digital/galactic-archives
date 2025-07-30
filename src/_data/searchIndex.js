@@ -19,7 +19,7 @@ export default function() {
     const { data, content } = matter(fileContents);
     if (data.eleventyExcludeFromCollections) continue;
 
-    const snippet = content.slice(0, 1000);
+    const snippet = content.replace(/\n/g, ' ').slice(0, 1000);
 
     const relative = file
       .replace(/^src\//, '')
