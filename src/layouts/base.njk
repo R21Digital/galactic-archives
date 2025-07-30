@@ -4,7 +4,7 @@
     {% include "head.njk" %}
   </head>
   <body>
-    <!-- Modern Header with New Navigation -->
+    <!-- Modern Header with Tab Navigation -->
     <header class="site-header">
       <div class="header-container">
         <!-- Logo and Brand -->
@@ -29,78 +29,39 @@
                     <li><a href="/professions/entertainer/">🎭 Entertainer</a></li>
                     <li><a href="/professions/scout/">🌿 Scout</a></li>
                     <li><a href="/professions/crafting/">🔨 Crafting</a></li>
+                    <li><a href="/professions/smuggler/">🚀 Smuggler</a></li>
+                    <li><a href="/professions/commando/">💣 Commando</a></li>
                     <li><a href="/professions/bounty-hunter/">🎯 Bounty Hunter</a></li>
                   </ul>
                 </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="/content/" class="nav-link">Content</a>
+              <div class="dropdown-menu">
                 <div class="dropdown-section">
-                  <h4>Content</h4>
+                  <h4>Quest Systems</h4>
                   <ul>
-                    <li><a href="/content/legacy/">🗺️ Legacy</a></li>
-                    <li><a href="/content/mustafar/">🌋 Mustafar</a></li>
-                    <li><a href="/content/theme-parks/">🎢 Theme Parks</a></li>
-                    <li><a href="/content/quests/">📜 Quests</a></li>
+                    <li><a href="/quests/legacy/">🗺️ Legacy</a></li>
+                    <li><a href="/quests/mustafar/">🔥 Mustafar</a></li>
+                    <li><a href="/quests/theme-parks/">🎢 Theme Parks</a></li>
+                    <li><a href="/quests/faction/">🏛️ Faction</a></li>
                   </ul>
                 </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="/systems/" class="nav-link">Systems</a>
+              <div class="dropdown-menu">
                 <div class="dropdown-section">
-                  <h4>Systems</h4>
+                  <h4>Game Systems</h4>
                   <ul>
-                    <li><a href="/systems/galactic-fortitude/">🏛️ Galactic Fortitude</a></li>
+                    <li><a href="/systems/galactic-fortitude/">⚔️ Galactic Fortitude</a></li>
                     <li><a href="/systems/loot/">💎 Loot</a></li>
                     <li><a href="/systems/pets/">🐾 Pets</a></li>
                     <li><a href="/systems/housing/">🏠 Housing</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item dropdown">
-              <a href="/tools/" class="nav-link">Tools</a>
-              <div class="dropdown-menu">
-                <div class="dropdown-section">
-                  <h4>Character Tools</h4>
-                  <ul>
-                    <li><a href="/pages/stat-optimizer/">⚡ Stat Optimizer</a></li>
-                    <li><a href="/tools/professions-guide/">📚 Professions Guide</a></li>
-                    <li><a href="/tools/gear-calculator/">🛡️ Gear Calculator</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h4>Community Tools</h4>
-                  <ul>
-                    <li><a href="/pages/leaderboard/">🏆 Leaderboard</a></li>
-                    <li><a href="/tools/guild-tracker/">👥 Guild Tracker</a></li>
-                    <li><a href="/tools/player-profiles/">👤 Player Profiles</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item dropdown">
-              <a href="/universe/" class="nav-link">Universe</a>
-              <div class="dropdown-menu">
-                <div class="dropdown-section">
-                  <h4>Planets & Locations</h4>
-                  <ul>
-                    <li><a href="/planets/tatooine/">🌍 Tatooine</a></li>
-                    <li><a href="/planets/naboo/">🌊 Naboo</a></li>
-                    <li><a href="/planets/endor/">🌲 Endor</a></li>
-                    <li><a href="/planets/kashyyyk/">🌳 Kashyyyk</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h4>Lore & Story</h4>
-                  <ul>
-                    <li><a href="/lore/">📖 Lore</a></li>
-                    <li><a href="/timeline/">⏰ Timeline</a></li>
-                    <li><a href="/characters/">🎭 Characters</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h4>Species & Races</h4>
-                  <ul>
-                    <li><a href="/species/">👽 Species</a></li>
-                    <li><a href="/creatures/">🐾 Creatures</a></li>
-                    <li><a href="/vehicles/">🚗 Vehicles</a></li>
+                    <li><a href="/systems/economy/">💰 Economy</a></li>
+                    <li><a href="/systems/pvp/">⚔️ PvP</a></li>
                   </ul>
                 </div>
               </div>
@@ -116,9 +77,6 @@
               <input type="text" id="search-input" placeholder="Search SWGDB..." aria-label="Search">
             </div>
           </div>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-            ☰
-          </button>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
             🌙
           </button>
@@ -126,71 +84,61 @@
       </div>
     </header>
 
-    <!-- Main Layout - No Sidebar -->
-    <div class="layout">
-      <!-- Main Content -->
-      <main class="content">
-        <!-- Breadcrumbs -->
-        {% include "breadcrumbs.njk" %}
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Breadcrumbs -->
+      {% include "breadcrumbs.njk" %}
 
-        <!-- Page Header -->
-        <header class="page-header">
-          <h1>{{ title }}</h1>
-          {% if category or tags or last_updated %}
-          <div class="page-meta">
-            {% if category %}<strong>Category:</strong> {{ category }}{% endif %}
-            {% if tags %}{% if category %} | {% endif %}<strong>Tags:</strong> {{ tags | default([]) | join(', ') }}{% endif %}
-            {% if last_updated %}{% if category or tags %} | {% endif %}<em>Last updated: {{ last_updated }}</em>{% endif %}
-          </div>
-          {% endif %}
-        </header>
+      <!-- Page Header -->
+      <header class="page-header">
+        <h1>{{ title }}</h1>
+        {% if category or tags or last_updated %}
+        <div class="page-meta">
+          {% if category %}<strong>Category:</strong> {{ category }}{% endif %}
+          {% if tags %}{% if category %} | {% endif %}<strong>Tags:</strong> {{ tags | default([]) | join(', ') }}{% endif %}
+          {% if last_updated %}{% if category or tags %} | {% endif %}<em>Last updated: {{ last_updated }}</em>{% endif %}
+        </div>
+        {% endif %}
+      </header>
 
-        <!-- Page Content -->
-        <article class="page-body">
-          {{ content | safe }}
-        </article>
-      </main>
-    </div>
+      <!-- Page Content -->
+      <article class="page-body">
+        {{ content | safe }}
+      </article>
+    </main>
 
     <!-- Footer -->
     {% include "footer.njk" %}
 
     <!-- Navigation Script -->
     <script>
-      // Mobile navigation toggle
-      const navToggle = document.getElementById('nav-toggle');
-      const mainNav = document.querySelector('.main-nav');
-      
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', () => {
-          mainNav.classList.toggle('mobile-open');
-        });
-      }
-
       // Dropdown functionality
       const dropdowns = document.querySelectorAll('.dropdown');
+      
       dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('.nav-link');
         const menu = dropdown.querySelector('.dropdown-menu');
         
-        if (link && menu) {
-          link.addEventListener('click', (e) => {
+        // Show dropdown on hover
+        dropdown.addEventListener('mouseenter', () => {
+          menu.style.display = 'block';
+        });
+        
+        // Hide dropdown when mouse leaves
+        dropdown.addEventListener('mouseleave', () => {
+          menu.style.display = 'none';
+        });
+        
+        // Mobile touch support
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
             e.preventDefault();
-            dropdown.classList.toggle('open');
-          });
-        }
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+          }
+        });
       });
 
-      // Close dropdowns when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!e.target.closest('.dropdown')) {
-          dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('open');
-          });
-        }
-      });
-
-      // Theme toggle (optional)
+      // Theme toggle
       const themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {
         themeToggle.addEventListener('click', () => {
